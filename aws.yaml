@@ -31,6 +31,7 @@ Metadata:
         Label:
           default: Network Configuration
         Parameters:
+          - HostedZoneName
           - PrivateIpAddressInstanceMaster0
           - PrivateIpAddressInstanceWorker0
           - SecurityGroupCidrIp
@@ -43,6 +44,8 @@ Metadata:
           - KeyPair0PublicKeyMaterial         
           
     ParameterLabels:
+      HostedZoneName:
+        default: The name of the hosted zone that you want to create records in
       InstanceMasterImageId:
         default: AMI to use for Cluster Master Instances
       InstanceMasterInstanceType:
@@ -65,6 +68,12 @@ Metadata:
         default: VPC CIDR
                 
 Parameters:
+
+  HostedZoneName:
+    Default: 'sebastian-colomar.es'
+    Description: >
+      The name of the hosted zone that you want to create records in.
+    Type: String
 
   InstanceMasterImageId:
     Default: ami-02d26659fd82cf299 #MUMBAI #UBUNTU24
@@ -190,6 +199,24 @@ Resources:
       KeyName: KeyPair0
       PublicKeyMaterial: !Ref KeyPair0PublicKeyMaterial
     Type: AWS::EC2::KeyPair
+
+  RecordSetMaster0:
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master0.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster0
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker0:
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker0.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker0
+      Type: A
+    Type: AWS::Route53::RecordSet
 
   Role:
     Properties:
