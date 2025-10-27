@@ -219,7 +219,7 @@ Resources:
       VpcId: !Ref VPC
     Type: AWS::EC2::SecurityGroup
 
-  SubnetPublic1:
+  SubnetPublic:
     Properties:
       AvailabilityZone:
         Fn::Select:
