@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpinfo-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: phpinfo
+  template:
+    metadata:
+      labels:
+        app: phpinfo
+    spec:
+      containers:
+      - command:
+        - php
+        - -f
+        - index.php
+        - -S
+        - 0.0.0.0:9000
+        image: php:alpine
+        name: phpinfo-container
+        ports:
+        - containerPort: 9000
+        volumeMounts:
+        - mountPath: /data
+          name: phpinfo
+          readOnly: true
+        - mountPath: /tmp
+          name: tmp
+          readOnly: false
+        workingDir: /data
+      initContainers:
+      - args:
+        - echo '<?php phpinfo();?>' >index.php
+        command:
+        - sh
+        - -c
+        image: busybox
+        name: phpinfo-init
+        volumeMounts:
+        - mountPath: /data
+          name: phpinfo
+          readOnly: false
+        workingDir: /data
+      volumes:
+      - name: phpinfo
+      - name: tmp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: phpinfo
+  name: phpinfo-svc
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 9000
+  selector:
+    app: phpinfo
+  type: NodePort
