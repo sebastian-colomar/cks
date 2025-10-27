@@ -30,7 +30,7 @@ pod_network_cidr=192.168.0.0/16
 
 echo ${ip_leader} ${kube} | tee --append /etc/hosts
 
-sudo kubeadm init --upload-certs --control-plane-endpoint "${kube}" --pod-network-cidr ${pod_network_cidr} --ignore-preflight-errors all 2>&1 | tee --append ${log}
+sudo kubeadm init --upload-certs --control-plane-endpoint "${kube}" --pod-network-cidr ${pod_network_cidr} 2>&1 | tee --append ${log}
 
 kubeconfig=/etc/kubernetes/admin.conf
 
