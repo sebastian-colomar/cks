@@ -146,6 +146,7 @@ Resources:
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster1
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic1
     Type: AWS::EC2::Instance
             
@@ -164,6 +165,7 @@ Resources:
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker1
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic1
     Type: AWS::EC2::Instance
 
