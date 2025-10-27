@@ -201,6 +201,7 @@ Resources:
     Type: AWS::EC2::KeyPair
 
   RecordSetMaster0:
+    DependsOn: [EIPMaster0]
     Properties: 
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master0.${HostedZoneName}'
@@ -211,6 +212,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetWorker0:
+    DependsOn: [EIPWorker0]
     Properties: 
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker0.${HostedZoneName}'
