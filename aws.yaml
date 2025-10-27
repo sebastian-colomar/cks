@@ -171,11 +171,11 @@ Resources:
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       UserData:
-      Fn::Base64: !Sub |
-        #cloud-config
-        preserve_hostname: false
-        manage_etc_hosts: true
-        fqdn: master0.${HostedZoneName}
+        Fn::Base64: !Sub |
+          #cloud-config
+          preserve_hostname: false
+          manage_etc_hosts: true
+          fqdn: master0.${HostedZoneName}
       Tags:
         - Key: Name
           Value: !Sub "master0.${HostedZoneName}"
@@ -199,11 +199,11 @@ Resources:
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       UserData:
-      Fn::Base64: !Sub |
-        #cloud-config
-        preserve_hostname: false
-        manage_etc_hosts: true
-        fqdn: worker0.${HostedZoneName}
+        Fn::Base64: !Sub |
+          #cloud-config
+          preserve_hostname: false
+          manage_etc_hosts: true
+          fqdn: worker0.${HostedZoneName}
       Tags:
         - Key: Name
           Value: !Sub "worker0.${HostedZoneName}"
