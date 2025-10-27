@@ -170,6 +170,15 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+      Fn::Base64: !Sub |
+        #cloud-config
+        preserve_hostname: false
+        manage_etc_hosts: true
+        fqdn: master0.${HostedZoneName}
+      Tags:
+        - Key: Name
+          Value: !Sub "master0.${HostedZoneName}"
     Type: AWS::EC2::Instance
             
   InstanceProfile:
@@ -189,6 +198,15 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+      Fn::Base64: !Sub |
+        #cloud-config
+        preserve_hostname: false
+        manage_etc_hosts: true
+        fqdn: worker0.${HostedZoneName}
+      Tags:
+        - Key: Name
+          Value: !Sub "worker0.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
   InternetGateway:
