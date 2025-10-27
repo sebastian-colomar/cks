@@ -18,10 +18,6 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 sudo systemctl enable --now kubelet
 
-sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
-
-sudo systemctl enable --now kubelet
-
 ip_leader=$(hostname -i)
 
 kube=kube-apiserver
