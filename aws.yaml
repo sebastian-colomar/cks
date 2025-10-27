@@ -36,6 +36,11 @@ Metadata:
           - SecurityGroupCidrIp
           - SubnetCidrBlockPublic
           - VPCCidrBlock
+      -
+        Label:
+          default: Security Configuration
+        Parameters:
+          - KeyPair0PublicKeyMaterial         
           
     ParameterLabels:
       InstanceMasterImageId:
@@ -46,6 +51,8 @@ Metadata:
         default: AMI to use for Cluster Worker Instances
       InstanceWorkerInstanceType:
         default: Cluster Worker Instance Size
+      KeyPair0PublicKeyMaterial:
+        default: Public SSH key for group 0 instances
       PrivateIpAddressInstanceMaster0:
         default: The private IP address for Master 0
       PrivateIpAddressInstanceWorker0:
@@ -85,6 +92,12 @@ Parameters:
     Default: 't3a.micro'
     Description: >
       Select Amazon EC2 instance type for the Cluster Worker instances.
+    Type: String
+
+  KeyPair0PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 0 instances.
     Type: String
     
   PrivateIpAddressInstanceMaster0:
@@ -172,10 +185,10 @@ Resources:
   InternetGateway:
     Type: AWS::EC2::InternetGateway
 
-  KeyPair:
+  KeyPair0:
     Properties:
       KeyName: KeyPair0
-      PublicKeyMaterial: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+      PublicKeyMaterial: !Ref KeyPair0PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   Role:
