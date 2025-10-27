@@ -31,10 +31,10 @@ Metadata:
         Label:
           default: Network Configuration
         Parameters:
-          - PrivateIpAddressInstanceMaster1
-          - PrivateIpAddressInstanceWorker1
+          - PrivateIpAddressInstanceMaster0
+          - PrivateIpAddressInstanceWorker0
           - SecurityGroupCidrIp
-          - SubnetCidrBlockPublic1
+          - SubnetCidrBlockPublic
           - VPCCidrBlock
           
     ParameterLabels:
@@ -46,14 +46,14 @@ Metadata:
         default: AMI to use for Cluster Worker Instances
       InstanceWorkerInstanceType:
         default: Cluster Worker Instance Size
-      PrivateIpAddressInstanceMaster1:
-        default: The private IP address for Master 1
-      PrivateIpAddressInstanceWorker1:
-        default: The private IP address for Worker 1
+      PrivateIpAddressInstanceMaster0:
+        default: The private IP address for Master 0
+      PrivateIpAddressInstanceWorker0:
+        default: The private IP address for Worker 0
       SecurityGroupCidrIp:
         default: Allowed CIDR for SSH EC2 instance Access
-      SubnetCidrBlockPublic1:
-        default: Public Subnet 1 CIDR
+      SubnetCidrBlockPublic:
+        default: Public Subnet CIDR
       VPCCidrBlock:
         default: VPC CIDR
                 
@@ -87,16 +87,16 @@ Parameters:
       Select Amazon EC2 instance type for the Cluster Worker instances.
     Type: String
     
-  PrivateIpAddressInstanceMaster1:
+  PrivateIpAddressInstanceMaster0:
     Default: 10.168.2.100
     Description: >
-      The private IP address for Master 1.
+      The private IP address for Master 0.
     Type: String
 
-  PrivateIpAddressInstanceWorker1:
+  PrivateIpAddressInstanceWorker0:
     Default: 10.168.2.200
     Description: >
-      The private IP address for Worker 1.
+      The private IP address for Worker 0.
     Type: String
     
   SecurityGroupCidrIp:
@@ -107,7 +107,7 @@ Parameters:
       Set it to 0.0.0.0/0 to make it accessible from anywhere.
     Type: String
     
-  SubnetCidrBlockPublic1:
+  SubnetCidrBlockPublic0:
     Default: 10.168.2.0/24
     Description: >
       CIDR block for public (DMZ) subnet located in Availability Zone 1. 
@@ -125,29 +125,29 @@ Parameters:
 #============================================================
 Resources:
 
-  EIPMaster1:
+  EIPMaster0:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster1
+      InstanceId: !Ref InstanceMaster0
     Type: AWS::EC2::EIP
 
-  EIPWorker1:
+  EIPWorker0:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker1
+      InstanceId: !Ref InstanceWorker0
     Type: AWS::EC2::EIP
 
-  InstanceMaster1:
+  InstanceMaster0:
     Properties:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
       KeyName: KeyPair1
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster1
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
-      SubnetId: !Ref SubnetPublic1
+      SubnetId: !Ref SubnetPublic
     Type: AWS::EC2::Instance
             
   InstanceProfile:
@@ -155,18 +155,18 @@ Resources:
       Roles: [!Ref Role]
     Type: AWS::IAM::InstanceProfile
 
-  InstanceWorker1:
+  InstanceWorker0:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair1      
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker1
+      KeyName: KeyPair0
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
-      SubnetId: !Ref SubnetPublic1
+      SubnetId: !Ref SubnetPublic
     Type: AWS::EC2::Instance
 
   InternetGateway:
@@ -174,7 +174,7 @@ Resources:
 
   KeyPair:
     Properties:
-      KeyName: KeyPair1
+      KeyName: KeyPair0
       PublicKeyMaterial: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
     Type: AWS::EC2::KeyPair
 
@@ -225,14 +225,14 @@ Resources:
         Fn::Select:
           - 0
           - Fn::GetAZs: !Ref 'AWS::Region'
-      CidrBlock: !Ref SubnetCidrBlockPublic1
+      CidrBlock: !Ref SubnetCidrBlockPublic
       VpcId: !Ref VPC
     Type: AWS::EC2::Subnet
 
-  SubnetRouteTableAssociationPublic1:
+  SubnetRouteTableAssociationPublic:
     Properties:
       RouteTableId: !Ref RouteTablePublic
-      SubnetId: !Ref SubnetPublic1
+      SubnetId: !Ref SubnetPublic
     Type: AWS::EC2::SubnetRouteTableAssociation
 
   VPC:
