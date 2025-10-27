@@ -142,7 +142,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair1
+      KeyName: KeyPair0
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
