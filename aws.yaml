@@ -206,6 +206,7 @@ Resources:
       Name: !Sub 'master0.${HostedZoneName}'
       ResourceRecords:
         - !Ref EIPMaster0
+      TTL: 60
       Type: A
     Type: AWS::Route53::RecordSet
 
@@ -215,6 +216,7 @@ Resources:
       Name: !Sub 'worker0.${HostedZoneName}'
       ResourceRecords:
         - !Ref EIPWorker0
+      TTL: 60
       Type: A
     Type: AWS::Route53::RecordSet
 
