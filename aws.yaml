@@ -33,7 +33,39 @@ Metadata:
         Parameters:
           - HostedZoneName
           - PrivateIpAddressInstanceMaster0
+          - PrivateIpAddressInstanceMaster1
+          - PrivateIpAddressInstanceMaster2
+          - PrivateIpAddressInstanceMaster3
+          - PrivateIpAddressInstanceMaster4
+          - PrivateIpAddressInstanceMaster5
+          - PrivateIpAddressInstanceMaster6
+          - PrivateIpAddressInstanceMaster7
+          - PrivateIpAddressInstanceMaster8
+          - PrivateIpAddressInstanceMaster9
+          - PrivateIpAddressInstanceMaster10
+          - PrivateIpAddressInstanceMaster11
+          - PrivateIpAddressInstanceMaster12
+          - PrivateIpAddressInstanceMaster13
+          - PrivateIpAddressInstanceMaster14
+          - PrivateIpAddressInstanceMaster15
+          - PrivateIpAddressInstanceMaster16
           - PrivateIpAddressInstanceWorker0
+          - PrivateIpAddressInstanceWorker1
+          - PrivateIpAddressInstanceWorker2
+          - PrivateIpAddressInstanceWorker3
+          - PrivateIpAddressInstanceWorker4
+          - PrivateIpAddressInstanceWorker5
+          - PrivateIpAddressInstanceWorker6
+          - PrivateIpAddressInstanceWorker7
+          - PrivateIpAddressInstanceWorker8
+          - PrivateIpAddressInstanceWorker9
+          - PrivateIpAddressInstanceWorker10
+          - PrivateIpAddressInstanceWorker11
+          - PrivateIpAddressInstanceWorker12
+          - PrivateIpAddressInstanceWorker13
+          - PrivateIpAddressInstanceWorker14
+          - PrivateIpAddressInstanceWorker15
+          - PrivateIpAddressInstanceWorker16
           - SecurityGroupCidrIp
           - SubnetCidrBlockPublic
           - VPCCidrBlock
@@ -42,6 +74,22 @@ Metadata:
           default: Security Configuration
         Parameters:
           - KeyPair0PublicKeyMaterial         
+          - KeyPair1PublicKeyMaterial         
+          - KeyPair2PublicKeyMaterial         
+          - KeyPair3PublicKeyMaterial         
+          - KeyPair4PublicKeyMaterial         
+          - KeyPair5PublicKeyMaterial         
+          - KeyPair6PublicKeyMaterial         
+          - KeyPair7PublicKeyMaterial         
+          - KeyPair8PublicKeyMaterial         
+          - KeyPair9PublicKeyMaterial         
+          - KeyPair10PublicKeyMaterial         
+          - KeyPair11PublicKeyMaterial         
+          - KeyPair12PublicKeyMaterial         
+          - KeyPair13PublicKeyMaterial         
+          - KeyPair14PublicKeyMaterial         
+          - KeyPair15PublicKeyMaterial         
+          - KeyPair16PublicKeyMaterial         
           
     ParameterLabels:
       HostedZoneName:
@@ -58,8 +106,72 @@ Metadata:
         default: Public SSH key for group 0 instances
       PrivateIpAddressInstanceMaster0:
         default: The private IP address for Master 0
+      PrivateIpAddressInstanceMaster1:
+        default: The private IP address for Master 1
+      PrivateIpAddressInstanceMaster2:
+        default: The private IP address for Master 2
+      PrivateIpAddressInstanceMaster3:
+        default: The private IP address for Master 3
+      PrivateIpAddressInstanceMaster4:
+        default: The private IP address for Master 4
+      PrivateIpAddressInstanceMaster5:
+        default: The private IP address for Master 5
+      PrivateIpAddressInstanceMaster6:
+        default: The private IP address for Master 6
+      PrivateIpAddressInstanceMaster7:
+        default: The private IP address for Master 7
+      PrivateIpAddressInstanceMaster8:
+        default: The private IP address for Master 8
+      PrivateIpAddressInstanceMaster9:
+        default: The private IP address for Master 9
+      PrivateIpAddressInstanceMaster10:
+        default: The private IP address for Master 10
+      PrivateIpAddressInstanceMaster11:
+        default: The private IP address for Master 11
+      PrivateIpAddressInstanceMaster12:
+        default: The private IP address for Master 12
+      PrivateIpAddressInstanceMaster13:
+        default: The private IP address for Master 13
+      PrivateIpAddressInstanceMaster14:
+        default: The private IP address for Master 14
+      PrivateIpAddressInstanceMaster15:
+        default: The private IP address for Master 15
+      PrivateIpAddressInstanceMaster16:
+        default: The private IP address for Master 16
       PrivateIpAddressInstanceWorker0:
         default: The private IP address for Worker 0
+      PrivateIpAddressInstanceWorker1:
+        default: The private IP address for Worker 1
+      PrivateIpAddressInstanceWorker2:
+        default: The private IP address for Worker 2
+      PrivateIpAddressInstanceWorker3:
+        default: The private IP address for Worker 3
+      PrivateIpAddressInstanceWorker4:
+        default: The private IP address for Worker 4
+      PrivateIpAddressInstanceWorker5:
+        default: The private IP address for Worker 5
+      PrivateIpAddressInstanceWorker6:
+        default: The private IP address for Worker 6
+      PrivateIpAddressInstanceWorker7:
+        default: The private IP address for Worker 7
+      PrivateIpAddressInstanceWorker8:
+        default: The private IP address for Worker 8
+      PrivateIpAddressInstanceWorker9:
+        default: The private IP address for Worker 9
+      PrivateIpAddressInstanceWorker10:
+        default: The private IP address for Worker 10
+      PrivateIpAddressInstanceWorker11:
+        default: The private IP address for Worker 11
+      PrivateIpAddressInstanceWorker12:
+        default: The private IP address for Worker 12
+      PrivateIpAddressInstanceWorker13:
+        default: The private IP address for Worker 13
+      PrivateIpAddressInstanceWorker14:
+        default: The private IP address for Worker 14
+      PrivateIpAddressInstanceWorker15:
+        default: The private IP address for Worker 15
+      PrivateIpAddressInstanceWorker16:
+        default: The private IP address for Worker 16
       SecurityGroupCidrIp:
         default: Allowed CIDR for SSH EC2 instance Access
       SubnetCidrBlockPublic:
@@ -108,11 +220,203 @@ Parameters:
     Description: >
       Public SSH key used to access the group 0 instances.
     Type: String
-    
+
+  KeyPair1PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 1 instances.
+    Type: String
+
+  KeyPair2PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 2 instances.
+    Type: String
+
+  KeyPair3PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 3 instances.
+    Type: String
+
+  KeyPair4PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 4 instances.
+    Type: String
+
+  KeyPair5PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 5 instances.
+    Type: String
+
+  KeyPair6PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 6 instances.
+    Type: String
+
+  KeyPair7PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 7 instances.
+    Type: String
+
+  KeyPair8PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 8 instances.
+    Type: String
+
+  KeyPair9PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 9 instances.
+    Type: String
+
+  KeyPair10PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 10 instances.
+    Type: String
+
+  KeyPair11PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 11 instances.
+    Type: String
+
+  KeyPair12PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 12 instances.
+    Type: String
+
+  KeyPair13PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 13 instances.
+    Type: String
+
+  KeyPair14PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 14 instances.
+    Type: String
+
+  KeyPair15PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 15 instances.
+    Type: String
+
+  KeyPair16PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 16 instances.
+    Type: String
+
   PrivateIpAddressInstanceMaster0:
     Default: 10.168.2.100
     Description: >
       The private IP address for Master 0.
+    Type: String
+
+  PrivateIpAddressInstanceMaster1:
+    Default: 10.168.2.101
+    Description: >
+      The private IP address for Master 1.
+    Type: String
+
+  PrivateIpAddressInstanceMaster2:
+    Default: 10.168.2.102
+    Description: >
+      The private IP address for Master 2.
+    Type: String
+
+  PrivateIpAddressInstanceMaster3:
+    Default: 10.168.2.103
+    Description: >
+      The private IP address for Master 3.
+    Type: String
+
+  PrivateIpAddressInstanceMaster4:
+    Default: 10.168.2.104
+    Description: >
+      The private IP address for Master 4.
+    Type: String
+
+  PrivateIpAddressInstanceMaster5:
+    Default: 10.168.2.105
+    Description: >
+      The private IP address for Master 5.
+    Type: String
+
+  PrivateIpAddressInstanceMaster6:
+    Default: 10.168.2.106
+    Description: >
+      The private IP address for Master 6.
+    Type: String
+
+  PrivateIpAddressInstanceMaster7:
+    Default: 10.168.2.107
+    Description: >
+      The private IP address for Master 7.
+    Type: String
+
+  PrivateIpAddressInstanceMaster8:
+    Default: 10.168.2.108
+    Description: >
+      The private IP address for Master 8.
+    Type: String
+
+  PrivateIpAddressInstanceMaster9:
+    Default: 10.168.2.109
+    Description: >
+      The private IP address for Master 9.
+    Type: String
+
+  PrivateIpAddressInstanceMaster10:
+    Default: 10.168.2.110
+    Description: >
+      The private IP address for Master 10.
+    Type: String
+
+  PrivateIpAddressInstanceMaster11:
+    Default: 10.168.2.111
+    Description: >
+      The private IP address for Master 11.
+    Type: String
+
+  PrivateIpAddressInstanceMaster12:
+    Default: 10.168.2.112
+    Description: >
+      The private IP address for Master 12.
+    Type: String
+
+  PrivateIpAddressInstanceMaster13:
+    Default: 10.168.2.113
+    Description: >
+      The private IP address for Master 13.
+    Type: String
+
+  PrivateIpAddressInstanceMaster14:
+    Default: 10.168.2.114
+    Description: >
+      The private IP address for Master 14.
+    Type: String
+
+  PrivateIpAddressInstanceMaster15:
+    Default: 10.168.2.115
+    Description: >
+      The private IP address for Master 15.
+    Type: String
+
+  PrivateIpAddressInstanceMaster16:
+    Default: 10.168.2.116
+    Description: >
+      The private IP address for Master 16.
     Type: String
 
   PrivateIpAddressInstanceWorker0:
@@ -120,7 +424,103 @@ Parameters:
     Description: >
       The private IP address for Worker 0.
     Type: String
-    
+
+  PrivateIpAddressInstanceWorker1:
+    Default: 10.168.2.201
+    Description: >
+      The private IP address for Worker 1.
+    Type: String
+
+  PrivateIpAddressInstanceWorker2:
+    Default: 10.168.2.202
+    Description: >
+      The private IP address for Worker 2.
+    Type: String
+
+  PrivateIpAddressInstanceWorker3:
+    Default: 10.168.2.203
+    Description: >
+      The private IP address for Worker 3.
+    Type: String
+
+  PrivateIpAddressInstanceWorker4:
+    Default: 10.168.2.204
+    Description: >
+      The private IP address for Worker 4.
+    Type: String
+
+  PrivateIpAddressInstanceWorker5:
+    Default: 10.168.2.205
+    Description: >
+      The private IP address for Worker 5.
+    Type: String
+
+  PrivateIpAddressInstanceWorker6:
+    Default: 10.168.2.206
+    Description: >
+      The private IP address for Worker 6.
+    Type: String
+
+  PrivateIpAddressInstanceWorker7:
+    Default: 10.168.2.207
+    Description: >
+      The private IP address for Worker 7.
+    Type: String
+
+  PrivateIpAddressInstanceWorker8:
+    Default: 10.168.2.208
+    Description: >
+      The private IP address for Worker 8.
+    Type: String
+
+  PrivateIpAddressInstanceWorker9:
+    Default: 10.168.2.209
+    Description: >
+      The private IP address for Worker 9.
+    Type: String
+
+  PrivateIpAddressInstanceWorker10:
+    Default: 10.168.2.210
+    Description: >
+      The private IP address for Worker 10.
+    Type: String
+
+  PrivateIpAddressInstanceWorker11:
+    Default: 10.168.2.211
+    Description: >
+      The private IP address for Worker 11.
+    Type: String
+
+  PrivateIpAddressInstanceWorker12:
+    Default: 10.168.2.212
+    Description: >
+      The private IP address for Worker 12.
+    Type: String
+
+  PrivateIpAddressInstanceWorker13:
+    Default: 10.168.2.213
+    Description: >
+      The private IP address for Worker 13.
+    Type: String
+
+  PrivateIpAddressInstanceWorker14:
+    Default: 10.168.2.214
+    Description: >
+      The private IP address for Worker 14.
+    Type: String
+
+  PrivateIpAddressInstanceWorker15:
+    Default: 10.168.2.215
+    Description: >
+      The private IP address for Worker 15.
+    Type: String
+
+  PrivateIpAddressInstanceWorker16:
+    Default: 10.168.2.216
+    Description: >
+      The private IP address for Worker 16.
+    Type: String
+
   SecurityGroupCidrIp:
     Default: 0.0.0.0/0
     Description: >
@@ -153,10 +553,202 @@ Resources:
       InstanceId: !Ref InstanceMaster0
     Type: AWS::EC2::EIP
 
+  EIPMaster1:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster1
+    Type: AWS::EC2::EIP
+
+  EIPMaster2:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster2
+    Type: AWS::EC2::EIP
+
+  EIPMaster3:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster3
+    Type: AWS::EC2::EIP
+
+  EIPMaster4:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster4
+    Type: AWS::EC2::EIP
+
+  EIPMaster5:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster5
+    Type: AWS::EC2::EIP
+
+  EIPMaster6:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster6
+    Type: AWS::EC2::EIP
+
+  EIPMaster7:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster7
+    Type: AWS::EC2::EIP
+
+  EIPMaster8:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster8
+    Type: AWS::EC2::EIP
+
+  EIPMaster9:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster9
+    Type: AWS::EC2::EIP
+
+  EIPMaster10:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster10
+    Type: AWS::EC2::EIP
+
+  EIPMaster11:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster11
+    Type: AWS::EC2::EIP
+
+  EIPMaster12:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster12
+    Type: AWS::EC2::EIP
+
+  EIPMaster13:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster13
+    Type: AWS::EC2::EIP
+
+  EIPMaster14:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster14
+    Type: AWS::EC2::EIP
+
+  EIPMaster15:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster15
+    Type: AWS::EC2::EIP
+
+  EIPMaster16:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster16
+    Type: AWS::EC2::EIP
+
   EIPWorker0:
     Properties:
       Domain: vpc
       InstanceId: !Ref InstanceWorker0
+    Type: AWS::EC2::EIP
+
+  EIPWorker1:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker1
+    Type: AWS::EC2::EIP
+
+  EIPWorker2:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker2
+    Type: AWS::EC2::EIP
+
+  EIPWorker3:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker3
+    Type: AWS::EC2::EIP
+
+  EIPWorker4:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker4
+    Type: AWS::EC2::EIP
+
+  EIPWorker5:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker5
+    Type: AWS::EC2::EIP
+
+  EIPWorker6:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker6
+    Type: AWS::EC2::EIP
+
+  EIPWorker7:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker7
+    Type: AWS::EC2::EIP
+
+  EIPWorker8:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker8
+    Type: AWS::EC2::EIP
+
+  EIPWorker9:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker9
+    Type: AWS::EC2::EIP
+
+  EIPWorker10:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker10
+    Type: AWS::EC2::EIP
+
+  EIPWorker11:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker11
+    Type: AWS::EC2::EIP
+
+  EIPWorker12:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker12
+    Type: AWS::EC2::EIP
+
+  EIPWorker13:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker13
+    Type: AWS::EC2::EIP
+
+  EIPWorker14:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker14
+    Type: AWS::EC2::EIP
+
+  EIPWorker15:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker15
+    Type: AWS::EC2::EIP
+
+  EIPWorker16:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker16
     Type: AWS::EC2::EIP
 
   InstanceMaster0:
@@ -174,7 +766,263 @@ Resources:
         - Key: Name
           Value: !Sub "master0.${HostedZoneName}"
     Type: AWS::EC2::Instance
-            
+
+  InstanceMaster1:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair1
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master1.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster2:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair2
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master2.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster3:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair3
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master3.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster4:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair4
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master4.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster5:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair5
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master5.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster6:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair6
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master6.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster7:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair7
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master7.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster8:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair8
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master8.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster9:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair9
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master9.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster10:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair10
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master10.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster11:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair11
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master11.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster12:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair12
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master12.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster13:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair13
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master13.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster14:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair14
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master14.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster15:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair15
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master15.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster16:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: KeyPair16
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master16.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
   InstanceProfile:
     Properties:
       Roles: [!Ref Role]
@@ -197,6 +1045,278 @@ Resources:
           Value: !Sub "worker0.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
+  InstanceWorker1:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair1
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker1.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker2:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair2
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker2.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker3:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair3
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker3.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker4:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair4
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker4.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker5:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair5
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker5.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker6:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair6
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker6.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker7:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair7
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker7.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker8:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair8
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker8.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker9:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair9
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker9.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker10:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair10
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker10.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker11:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair11
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker11.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker12:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair12
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker12.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker13:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair13
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker13.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker14:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair14
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker14.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker15:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair15
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker15.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker16:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: KeyPair16
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker16.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
   InternetGateway:
     Type: AWS::EC2::InternetGateway
 
@@ -204,6 +1324,102 @@ Resources:
     Properties:
       KeyName: KeyPair0
       PublicKeyMaterial: !Ref KeyPair0PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair1:
+    Properties:
+      KeyName: KeyPair1
+      PublicKeyMaterial: !Ref KeyPair1PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair2:
+    Properties:
+      KeyName: KeyPair2
+      PublicKeyMaterial: !Ref KeyPair2PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair3:
+    Properties:
+      KeyName: KeyPair3
+      PublicKeyMaterial: !Ref KeyPair3PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair4:
+    Properties:
+      KeyName: KeyPair4
+      PublicKeyMaterial: !Ref KeyPair4PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair5:
+    Properties:
+      KeyName: KeyPair5
+      PublicKeyMaterial: !Ref KeyPair5PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair6:
+    Properties:
+      KeyName: KeyPair6
+      PublicKeyMaterial: !Ref KeyPair6PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair7:
+    Properties:
+      KeyName: KeyPair7
+      PublicKeyMaterial: !Ref KeyPair7PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair8:
+    Properties:
+      KeyName: KeyPair8
+      PublicKeyMaterial: !Ref KeyPair8PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair9:
+    Properties:
+      KeyName: KeyPair9
+      PublicKeyMaterial: !Ref KeyPair9PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair10:
+    Properties:
+      KeyName: KeyPair10
+      PublicKeyMaterial: !Ref KeyPair10PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair11:
+    Properties:
+      KeyName: KeyPair11
+      PublicKeyMaterial: !Ref KeyPair11PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair12:
+    Properties:
+      KeyName: KeyPair12
+      PublicKeyMaterial: !Ref KeyPair12PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair13:
+    Properties:
+      KeyName: KeyPair13
+      PublicKeyMaterial: !Ref KeyPair13PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair14:
+    Properties:
+      KeyName: KeyPair14
+      PublicKeyMaterial: !Ref KeyPair14PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair15:
+    Properties:
+      KeyName: KeyPair15
+      PublicKeyMaterial: !Ref KeyPair15PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair16:
+    Properties:
+      KeyName: KeyPair16
+      PublicKeyMaterial: !Ref KeyPair16PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   RecordSetMaster0:
@@ -217,6 +1433,182 @@ Resources:
       Type: A
     Type: AWS::Route53::RecordSet
 
+  RecordSetMaster1:
+    DependsOn: [EIPMaster1]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master1.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster1
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster2:
+    DependsOn: [EIPMaster2]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master2.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster2
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster3:
+    DependsOn: [EIPMaster3]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master3.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster3
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster4:
+    DependsOn: [EIPMaster4]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master4.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster4
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster5:
+    DependsOn: [EIPMaster5]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master5.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster5
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster6:
+    DependsOn: [EIPMaster6]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master6.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster6
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster7:
+    DependsOn: [EIPMaster7]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master7.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster7
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster8:
+    DependsOn: [EIPMaster8]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master8.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster8
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster9:
+    DependsOn: [EIPMaster9]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master9.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster9
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster10:
+    DependsOn: [EIPMaster10]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master10.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster10
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster11:
+    DependsOn: [EIPMaster11]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master11.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster11
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster12:
+    DependsOn: [EIPMaster12]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master12.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster12
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster13:
+    DependsOn: [EIPMaster13]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master13.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster13
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster14:
+    DependsOn: [EIPMaster14]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master14.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster14
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster15:
+    DependsOn: [EIPMaster15]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master15.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster15
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster16:
+    DependsOn: [EIPMaster16]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master16.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster16
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
   RecordSetWorker0:
     DependsOn: [EIPWorker0]
     Properties: 
@@ -224,6 +1616,182 @@ Resources:
       Name: !Sub 'worker0.${HostedZoneName}'
       ResourceRecords:
         - !Ref EIPWorker0
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker1:
+    DependsOn: [EIPWorker1]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker1.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker1
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker2:
+    DependsOn: [EIPWorker2]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker2.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker2
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker3:
+    DependsOn: [EIPWorker3]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker3.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker3
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker4:
+    DependsOn: [EIPWorker4]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker4.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker4
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker5:
+    DependsOn: [EIPWorker5]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker5.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker5
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker6:
+    DependsOn: [EIPWorker6]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker6.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker6
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker7:
+    DependsOn: [EIPWorker7]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker7.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker7
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker8:
+    DependsOn: [EIPWorker8]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker8.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker8
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker9:
+    DependsOn: [EIPWorker9]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker9.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker9
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker10:
+    DependsOn: [EIPWorker10]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker10.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker10
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker11:
+    DependsOn: [EIPWorker11]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker11.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker11
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker12:
+    DependsOn: [EIPWorker12]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker12.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker12
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker13:
+    DependsOn: [EIPWorker13]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker13.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker13
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker14:
+    DependsOn: [EIPWorker14]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker14.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker14
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker15:
+    DependsOn: [EIPWorker15]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker15.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker15
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker16:
+    DependsOn: [EIPWorker16]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker16.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker16
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
