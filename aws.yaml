@@ -756,7 +756,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair0
+      KeyName: !Ref KeyPair0
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -772,7 +772,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair1
+      KeyName: !Ref KeyPair1
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster1
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -788,7 +788,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair2
+      KeyName: !Ref KeyPair2
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster2
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -804,7 +804,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair3
+      KeyName: !Ref KeyPair3
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster3
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -820,7 +820,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair4
+      KeyName: !Ref KeyPair4
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster4
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -836,7 +836,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair5
+      KeyName: !Ref KeyPair5
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster5
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -852,7 +852,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair6
+      KeyName: !Ref KeyPair6
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster6
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -868,7 +868,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair7
+      KeyName: !Ref KeyPair7
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster7
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -884,7 +884,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair8
+      KeyName: !Ref KeyPair8
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster8
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -900,7 +900,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair9
+      KeyName: !Ref KeyPair9
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster9
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -916,7 +916,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair10
+      KeyName: !Ref KeyPair10
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster10
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -932,7 +932,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair11
+      KeyName: !Ref KeyPair11
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster11
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -948,7 +948,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair12
+      KeyName: !Ref KeyPair12
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster12
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -964,7 +964,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair13
+      KeyName: !Ref KeyPair13
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster13
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -980,7 +980,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair14
+      KeyName: !Ref KeyPair14
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster14
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -996,7 +996,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair15
+      KeyName: !Ref KeyPair15
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster15
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1012,7 +1012,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: KeyPair16
+      KeyName: !Ref KeyPair16
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster16
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1034,7 +1034,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair0
+      KeyName: !Ref KeyPair0
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1051,7 +1051,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair1
+      KeyName: !Ref KeyPair1
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker1
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1068,7 +1068,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair2
+      KeyName: !Ref KeyPair2
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker2
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1085,7 +1085,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair3
+      KeyName: !Ref KeyPair3
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker3
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1102,7 +1102,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair4
+      KeyName: !Ref KeyPair4
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker4
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1119,7 +1119,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair5
+      KeyName: !Ref KeyPair5
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker5
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1136,7 +1136,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair6
+      KeyName: !Ref KeyPair6
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker6
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1153,7 +1153,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair7
+      KeyName: !Ref KeyPair7
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker7
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1170,7 +1170,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair8
+      KeyName: !Ref KeyPair8
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker8
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1187,7 +1187,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair9
+      KeyName: !Ref KeyPair9
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker9
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1204,7 +1204,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair10
+      KeyName: !Ref KeyPair10
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker10
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1221,7 +1221,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair11
+      KeyName: !Ref KeyPair11
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker11
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1238,7 +1238,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair12
+      KeyName: !Ref KeyPair12
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker12
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1255,7 +1255,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair13
+      KeyName: !Ref KeyPair13
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker13
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1272,7 +1272,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair14
+      KeyName: !Ref KeyPair14
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker14
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1289,7 +1289,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair15
+      KeyName: !Ref KeyPair15
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker15
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1306,7 +1306,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: KeyPair16
+      KeyName: !Ref KeyPair16
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker16
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1322,103 +1322,103 @@ Resources:
 
   KeyPair0:
     Properties:
-      KeyName: KeyPair0
+      KeyName: !Sub "KeyPair0-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair0PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair1:
     Properties:
-      KeyName: KeyPair1
+      KeyName: !Sub "KeyPair1-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair1PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair2:
     Properties:
-      KeyName: KeyPair2
+      KeyName: !Sub "KeyPair2-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair2PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair3:
     Properties:
-      KeyName: KeyPair3
+      KeyName: !Sub "KeyPair3-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair3PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair4:
     Properties:
-      KeyName: KeyPair4
+      KeyName: !Sub "KeyPair4-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair4PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair5:
     Properties:
-      KeyName: KeyPair5
+      KeyName: !Sub "KeyPair5-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair5PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair6:
     Properties:
-      KeyName: KeyPair6
+      KeyName: !Sub "KeyPair6-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair6PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair7:
     Properties:
-      KeyName: KeyPair7
+      KeyName: !Sub "KeyPair7-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair7PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair8:
     Properties:
-      KeyName: KeyPair8
+      KeyName: !Sub "KeyPair8-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair8PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair9:
     Properties:
-      KeyName: KeyPair9
+      KeyName: !Sub "KeyPair9-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair9PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair10:
     Properties:
-      KeyName: KeyPair10
+      KeyName: !Sub "KeyPair10-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair10PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair11:
     Properties:
-      KeyName: KeyPair11
+      KeyName: !Sub "KeyPair11-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair11PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair12:
     Properties:
-      KeyName: KeyPair12
+      KeyName: !Sub "KeyPair12-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair12PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair13:
     Properties:
-      KeyName: KeyPair13
+      KeyName: !Sub "KeyPair13-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair13PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair14:
     Properties:
-      KeyName: KeyPair14
+      KeyName: !Sub "KeyPair14-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair14PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair15:
     Properties:
-      KeyName: KeyPair15
+      KeyName: !Sub "KeyPair15-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair15PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   KeyPair16:
     Properties:
-      KeyName: KeyPair16
+      KeyName: !Sub "KeyPair16-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair16PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
