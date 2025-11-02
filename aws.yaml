@@ -21,14 +21,14 @@ Metadata:
         Parameters:
           - InstanceMasterImageId
           - InstanceMasterInstanceType
-          - InstanceMasterVolumeSize          
+          - InstanceMasterVolumeSize
       -
         Label:
           default: Cluster Worker Configuration
         Parameters:
           - InstanceWorkerImageId
           - InstanceWorkerInstanceType
-          - InstanceWorkerVolumeSize          
+          - InstanceWorkerVolumeSize
       -
         Label:
           default: Network Configuration
@@ -87,9 +87,9 @@ Metadata:
         Label:
           default: Security Configuration
         Parameters:
-          - KeyPair1PublicKeyMaterial         
-          - KeyPair2PublicKeyMaterial         
-          
+          - KeyPair1PublicKeyMaterial
+          - KeyPair2PublicKeyMaterial
+
     ParameterLabels:
       HostedZoneName:
         default: The name of the hosted zone that you want to create records in
@@ -98,15 +98,17 @@ Metadata:
       InstanceMasterInstanceType:
         default: Cluster Master Instance Size
       InstanceMasterVolumeSize:
-        default: Cluster Master Volume Size        
+        default: Cluster Master Volume Size
       InstanceWorkerImageId:
         default: AMI to use for Cluster Worker Instances
       InstanceWorkerInstanceType:
         default: Cluster Worker Instance Size
       InstanceWorkerVolumeSize:
-        default: Cluster Worker Volume Size        
-      KeyPair0PublicKeyMaterial:
-        default: Public SSH key for group 0 instances
+        default: Cluster Worker Volume Size
+      KeyPair1PublicKeyMaterial:
+        default: Public SSH key 1
+      KeyPair2PublicKeyMaterial:
+        default: Public SSH key 2
       PrivateIpAddressInstanceMaster0:
         default: The private IP address for Master 0
       PrivateIpAddressInstanceMaster1:
@@ -205,7 +207,7 @@ Metadata:
         default: Public Subnet CIDR
       VPCCidrBlock:
         default: VPC CIDR
-                
+
 Parameters:
 
   HostedZoneName:
@@ -217,25 +219,25 @@ Parameters:
   InstanceMasterImageId:
     Default: ami-02b8269d5e85954ef #MUMBAI #UBUNTU24
     Description: >
-      Select AMI to use for the Cluster Master instances. 
-      When it's left blank, the default AMI for your AWS region will be used. 
+      Select AMI to use for the Cluster Master instances.
+      When it's left blank, the default AMI for your AWS region will be used.
       When setting an AMI, it must be available in your current region.
     Type: String
-    
+
   InstanceMasterInstanceType:
     Default: 't3a.small'
     Description: >
       Select Amazon EC2 instance type for the Cluster Master instances.
     Type: String
-    
+
   InstanceWorkerImageId:
     Default: ami-02b8269d5e85954ef #MUMBAI #UBUNTU24
     Description: >
-      Select AMI to use for the Cluster Worker instances. 
-      When it's left blank, the default AMI for your AWS region will be used. 
+      Select AMI to use for the Cluster Worker instances.
+      When it's left blank, the default AMI for your AWS region will be used.
       When setting an AMI, it must be available in your current region.
     Type: String
-    
+
   InstanceWorkerInstanceType:
     Default: 't3a.small'
     Description: >
@@ -245,13 +247,13 @@ Parameters:
   KeyPair1PublicKeyMaterial:
     Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
     Description: >
-      Public SSH key used to access the group 1 instances.
+      Public SSH key 1
     Type: String
 
   KeyPair2PublicKeyMaterial:
     Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
     Description: >
-      Public SSH key used to access the group 2 instances.
+      Public SSH key 2
     Type: String
 
   PrivateIpAddressInstanceMaster0:
@@ -533,24 +535,24 @@ Parameters:
   SecurityGroupCidrIp:
     Default: 0.0.0.0/0
     Description: >
-      Allowed CIDR block for external SSH access to the EC2 instances. 
-      It defines the block of IPs that can access the EC2 instances. 
+      Allowed CIDR block for external SSH access to the EC2 instances.
+      It defines the block of IPs that can access the EC2 instances.
       Set it to 0.0.0.0/0 to make it accessible from anywhere.
     Type: String
-    
+
   SubnetCidrBlockPublic:
     Default: 10.168.2.0/24
     Description: >
-      CIDR block for public (DMZ) subnet located in Availability Zone 1. 
-      All resources located on this subnet are provided an IP within this address block. 
+      CIDR block for public (DMZ) subnet located in Availability Zone 1.
+      All resources located on this subnet are provided an IP within this address block.
     Type: String
-    
+
   VPCCidrBlock:
     Default: 10.168.0.0/16
     Description: >
       CIDR block for the VPC. All the subnets and resources will have an IP within this address block.
     Type: String
-    
+
 #============================================================
 # Resources
 #============================================================
@@ -860,7 +862,7 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -887,7 +889,7 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -914,7 +916,7 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -941,7 +943,7 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -968,7 +970,7 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -995,7 +997,7 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1022,11 +1024,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair7
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster7
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1050,11 +1051,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair8
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster8
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1078,11 +1078,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair9
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster9
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1106,11 +1105,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair10
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster10
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1134,11 +1132,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair11
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster11
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1162,11 +1159,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair12
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster12
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1190,11 +1186,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair13
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster13
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1218,11 +1213,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair14
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster14
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1246,11 +1240,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair15
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster15
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1274,11 +1267,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair16
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster16
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1302,11 +1294,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair17
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster17
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1330,11 +1321,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair18
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster18
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1358,11 +1348,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair19
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster19
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1386,11 +1375,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair20
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster20
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1414,11 +1402,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair21
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster21
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1442,11 +1429,10 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair22
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster22
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1471,16 +1457,15 @@ Resources:
     Type: AWS::IAM::InstanceProfile
 
   InstanceWorker0:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair0
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1500,16 +1485,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker1:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair1
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker1
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1529,16 +1513,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker2:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair2
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker2
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1558,16 +1541,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker3:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair3
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker3
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1587,16 +1569,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker4:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair4
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker4
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1616,16 +1597,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker5:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair5
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker5
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1645,16 +1625,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker6:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair6
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker6
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1674,16 +1653,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker7:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair7
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker7
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1703,16 +1681,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker8:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair8
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker8
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1732,16 +1709,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker9:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair9
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker9
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1761,16 +1737,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker10:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair10
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker10
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1790,16 +1765,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker11:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair11
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker11
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1819,16 +1793,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker12:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair12
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker12
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1848,16 +1821,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker13:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair13
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker13
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1877,16 +1849,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker14:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair14
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker14
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1906,16 +1877,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker15:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair15
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker15
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1935,16 +1905,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker16:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair16
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker16
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1964,16 +1933,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker17:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair17
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker17
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1993,16 +1961,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker18:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair18
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker18
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -2022,16 +1989,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker19:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair19
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker19
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -2051,16 +2017,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker20:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair20
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker20
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -2080,16 +2045,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker21:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair21
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker21
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -2109,16 +2073,15 @@ Resources:
     Type: AWS::EC2::Instance
 
   InstanceWorker22:
-    DependsOn: [VPCGatewayAttachment]  
+    DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: !Ref InstanceMasterVolumeSize        
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      KeyName: !Ref KeyPair22
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker22
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -2140,15 +2103,9 @@ Resources:
   InternetGateway:
     Type: AWS::EC2::InternetGateway
 
-  KeyPair1:
-    Properties:
-      KeyName: !Sub "KeyPair1-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair1PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
   RecordSetMaster0:
     DependsOn: [EIPMaster0]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master0.${HostedZoneName}'
       ResourceRecords:
@@ -2159,7 +2116,7 @@ Resources:
 
   RecordSetMaster1:
     DependsOn: [EIPMaster1]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master1.${HostedZoneName}'
       ResourceRecords:
@@ -2170,7 +2127,7 @@ Resources:
 
   RecordSetMaster2:
     DependsOn: [EIPMaster2]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master2.${HostedZoneName}'
       ResourceRecords:
@@ -2181,7 +2138,7 @@ Resources:
 
   RecordSetMaster3:
     DependsOn: [EIPMaster3]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master3.${HostedZoneName}'
       ResourceRecords:
@@ -2192,7 +2149,7 @@ Resources:
 
   RecordSetMaster4:
     DependsOn: [EIPMaster4]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master4.${HostedZoneName}'
       ResourceRecords:
@@ -2203,7 +2160,7 @@ Resources:
 
   RecordSetMaster5:
     DependsOn: [EIPMaster5]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master5.${HostedZoneName}'
       ResourceRecords:
@@ -2214,7 +2171,7 @@ Resources:
 
   RecordSetMaster6:
     DependsOn: [EIPMaster6]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master6.${HostedZoneName}'
       ResourceRecords:
@@ -2225,7 +2182,7 @@ Resources:
 
   RecordSetMaster7:
     DependsOn: [EIPMaster7]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master7.${HostedZoneName}'
       ResourceRecords:
@@ -2236,7 +2193,7 @@ Resources:
 
   RecordSetMaster8:
     DependsOn: [EIPMaster8]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master8.${HostedZoneName}'
       ResourceRecords:
@@ -2247,7 +2204,7 @@ Resources:
 
   RecordSetMaster9:
     DependsOn: [EIPMaster9]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master9.${HostedZoneName}'
       ResourceRecords:
@@ -2258,7 +2215,7 @@ Resources:
 
   RecordSetMaster10:
     DependsOn: [EIPMaster10]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master10.${HostedZoneName}'
       ResourceRecords:
@@ -2269,7 +2226,7 @@ Resources:
 
   RecordSetMaster11:
     DependsOn: [EIPMaster11]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master11.${HostedZoneName}'
       ResourceRecords:
@@ -2280,7 +2237,7 @@ Resources:
 
   RecordSetMaster12:
     DependsOn: [EIPMaster12]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master12.${HostedZoneName}'
       ResourceRecords:
@@ -2291,7 +2248,7 @@ Resources:
 
   RecordSetMaster13:
     DependsOn: [EIPMaster13]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master13.${HostedZoneName}'
       ResourceRecords:
@@ -2302,7 +2259,7 @@ Resources:
 
   RecordSetMaster14:
     DependsOn: [EIPMaster14]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master14.${HostedZoneName}'
       ResourceRecords:
@@ -2313,7 +2270,7 @@ Resources:
 
   RecordSetMaster15:
     DependsOn: [EIPMaster15]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master15.${HostedZoneName}'
       ResourceRecords:
@@ -2324,7 +2281,7 @@ Resources:
 
   RecordSetMaster16:
     DependsOn: [EIPMaster16]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master16.${HostedZoneName}'
       ResourceRecords:
@@ -2335,7 +2292,7 @@ Resources:
 
   RecordSetMaster17:
     DependsOn: [EIPMaster17]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master17.${HostedZoneName}'
       ResourceRecords:
@@ -2346,7 +2303,7 @@ Resources:
 
   RecordSetMaster18:
     DependsOn: [EIPMaster18]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master18.${HostedZoneName}'
       ResourceRecords:
@@ -2357,7 +2314,7 @@ Resources:
 
   RecordSetMaster19:
     DependsOn: [EIPMaster19]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master19.${HostedZoneName}'
       ResourceRecords:
@@ -2368,7 +2325,7 @@ Resources:
 
   RecordSetMaster20:
     DependsOn: [EIPMaster20]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master20.${HostedZoneName}'
       ResourceRecords:
@@ -2379,7 +2336,7 @@ Resources:
 
   RecordSetMaster21:
     DependsOn: [EIPMaster21]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master21.${HostedZoneName}'
       ResourceRecords:
@@ -2390,7 +2347,7 @@ Resources:
 
   RecordSetMaster22:
     DependsOn: [EIPMaster22]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master22.${HostedZoneName}'
       ResourceRecords:
@@ -2401,7 +2358,7 @@ Resources:
 
   RecordSetWorker0:
     DependsOn: [EIPWorker0]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker0.${HostedZoneName}'
       ResourceRecords:
@@ -2412,7 +2369,7 @@ Resources:
 
   RecordSetWorker1:
     DependsOn: [EIPWorker1]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker1.${HostedZoneName}'
       ResourceRecords:
@@ -2423,7 +2380,7 @@ Resources:
 
   RecordSetWorker2:
     DependsOn: [EIPWorker2]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker2.${HostedZoneName}'
       ResourceRecords:
@@ -2434,7 +2391,7 @@ Resources:
 
   RecordSetWorker3:
     DependsOn: [EIPWorker3]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker3.${HostedZoneName}'
       ResourceRecords:
@@ -2445,7 +2402,7 @@ Resources:
 
   RecordSetWorker4:
     DependsOn: [EIPWorker4]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker4.${HostedZoneName}'
       ResourceRecords:
@@ -2456,7 +2413,7 @@ Resources:
 
   RecordSetWorker5:
     DependsOn: [EIPWorker5]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker5.${HostedZoneName}'
       ResourceRecords:
@@ -2467,7 +2424,7 @@ Resources:
 
   RecordSetWorker6:
     DependsOn: [EIPWorker6]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker6.${HostedZoneName}'
       ResourceRecords:
@@ -2478,7 +2435,7 @@ Resources:
 
   RecordSetWorker7:
     DependsOn: [EIPWorker7]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker7.${HostedZoneName}'
       ResourceRecords:
@@ -2489,7 +2446,7 @@ Resources:
 
   RecordSetWorker8:
     DependsOn: [EIPWorker8]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker8.${HostedZoneName}'
       ResourceRecords:
@@ -2500,7 +2457,7 @@ Resources:
 
   RecordSetWorker9:
     DependsOn: [EIPWorker9]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker9.${HostedZoneName}'
       ResourceRecords:
@@ -2511,7 +2468,7 @@ Resources:
 
   RecordSetWorker10:
     DependsOn: [EIPWorker10]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker10.${HostedZoneName}'
       ResourceRecords:
@@ -2522,7 +2479,7 @@ Resources:
 
   RecordSetWorker11:
     DependsOn: [EIPWorker11]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker11.${HostedZoneName}'
       ResourceRecords:
@@ -2533,7 +2490,7 @@ Resources:
 
   RecordSetWorker12:
     DependsOn: [EIPWorker12]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker12.${HostedZoneName}'
       ResourceRecords:
@@ -2544,7 +2501,7 @@ Resources:
 
   RecordSetWorker13:
     DependsOn: [EIPWorker13]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker13.${HostedZoneName}'
       ResourceRecords:
@@ -2555,7 +2512,7 @@ Resources:
 
   RecordSetWorker14:
     DependsOn: [EIPWorker14]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker14.${HostedZoneName}'
       ResourceRecords:
@@ -2566,7 +2523,7 @@ Resources:
 
   RecordSetWorker15:
     DependsOn: [EIPWorker15]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker15.${HostedZoneName}'
       ResourceRecords:
@@ -2577,7 +2534,7 @@ Resources:
 
   RecordSetWorker16:
     DependsOn: [EIPWorker16]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker16.${HostedZoneName}'
       ResourceRecords:
@@ -2588,7 +2545,7 @@ Resources:
 
   RecordSetWorker17:
     DependsOn: [EIPWorker17]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker17.${HostedZoneName}'
       ResourceRecords:
@@ -2599,7 +2556,7 @@ Resources:
 
   RecordSetWorker18:
     DependsOn: [EIPWorker18]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker18.${HostedZoneName}'
       ResourceRecords:
@@ -2610,7 +2567,7 @@ Resources:
 
   RecordSetWorker19:
     DependsOn: [EIPWorker19]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker19.${HostedZoneName}'
       ResourceRecords:
@@ -2621,7 +2578,7 @@ Resources:
 
   RecordSetWorker20:
     DependsOn: [EIPWorker20]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker20.${HostedZoneName}'
       ResourceRecords:
@@ -2632,7 +2589,7 @@ Resources:
 
   RecordSetWorker21:
     DependsOn: [EIPWorker21]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker21.${HostedZoneName}'
       ResourceRecords:
@@ -2643,7 +2600,7 @@ Resources:
 
   RecordSetWorker22:
     DependsOn: [EIPWorker22]
-    Properties: 
+    Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'worker22.${HostedZoneName}'
       ResourceRecords:
@@ -2684,12 +2641,12 @@ Resources:
   SecurityGroup:
     Properties:
       GroupDescription: Security Group to access via SSH the EC2 Instances
-      SecurityGroupIngress: 
-        - 
+      SecurityGroupIngress:
+        -
           CidrIp: !Ref SecurityGroupCidrIp
           FromPort: 22
           IpProtocol: tcp
-          ToPort: 22        
+          ToPort: 22
       VpcId: !Ref VPC
     Type: AWS::EC2::SecurityGroup
 
