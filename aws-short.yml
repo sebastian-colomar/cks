@@ -257,9 +257,9 @@ Resources:
         DependsOn: [EIPMaster${Index}]
         Properties: 
           HostedZoneName: !Sub '${HostedZoneName}.'
-          Name: !Sub 'master{Index}.${HostedZoneName}'
+          Name: !Sub 'master${Index}.${HostedZoneName}'
           ResourceRecords:
-            - !Ref EIPMaster{Index}
+            - !Ref EIPMaster${Index}
           TTL: 300
           Type: A
         Type: AWS::Route53::RecordSet
@@ -268,9 +268,9 @@ Resources:
         DependsOn: [EIPWorker${Index}]
         Properties: 
           HostedZoneName: !Sub '${HostedZoneName}.'
-          Name: !Sub 'worker{Index}.${HostedZoneName}'
+          Name: !Sub 'worker${Index}.${HostedZoneName}'
           ResourceRecords:
-            - !Ref EIPWorker{Index}
+            - !Ref EIPWorker${Index}
           TTL: 300
           Type: A
         Type: AWS::Route53::RecordSet
