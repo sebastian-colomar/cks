@@ -21,12 +21,14 @@ Metadata:
         Parameters:
           - InstanceMasterImageId
           - InstanceMasterInstanceType
+          - InstanceMasterVolumeSize
       -
         Label:
           default: Cluster Worker Configuration
         Parameters:
           - InstanceWorkerImageId
           - InstanceWorkerInstanceType
+          - InstanceWorkerVolumeSize
       -
         Label:
           default: Network Configuration
@@ -51,10 +53,14 @@ Metadata:
         default: AMI to use for Cluster Master Instances
       InstanceMasterInstanceType:
         default: Cluster Master Instance Size
+      InstanceMasterVolumeSize:
+        default: Cluster Master Volume Size
       InstanceWorkerImageId:
         default: AMI to use for Cluster Worker Instances
       InstanceWorkerInstanceType:
         default: Cluster Worker Instance Size
+      InstanceWorkerVolumeSize:
+        default: Cluster Worker Volume Size
       KeyPairPublicKeyMaterial:
         default: Public SSH main key for instances
       KeyPairSecondaryPublicKeyMaterial:
@@ -95,7 +101,13 @@ Parameters:
     Description: >
       Select Amazon EC2 instance type for the Cluster Master instances.
     Type: String
-    
+ 
+  InstanceMasterVolumeSize:
+    Default: 20
+    Description: >
+      Select Amazon EC2 volume size for the Cluster Master instances.
+    Type: Integer
+
   InstanceWorkerImageId:
     Default: ami-02d26659fd82cf299 #MUMBAI #UBUNTU24
     Description: >
@@ -109,6 +121,12 @@ Parameters:
     Description: >
       Select Amazon EC2 instance type for the Cluster Worker instances.
     Type: String
+
+  InstanceWorkerVolumeSize:
+    Default: 20
+    Description: >
+      Select Amazon EC2 volume size for the Cluster Worker instances.
+    Type: Integer
 
   KeyPairPublicKeyMaterial:
     Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
@@ -178,6 +196,10 @@ Resources:
 
       InstanceMaster${Index}:
         Properties:
+          BlockDeviceMappings:
+            - DeviceName: /dev/xvda
+              Ebs:
+                VolumeSize: !Ref InstanceMasterVolumeSize        
           IamInstanceProfile: !Ref InstanceProfile
           ImageId: !Ref InstanceMasterImageId
           InstanceType: !Ref InstanceMasterInstanceType
@@ -204,6 +226,10 @@ Resources:
       InstanceWorker${Index}:
         DependsOn: [VPCGatewayAttachment]  
         Properties:
+          BlockDeviceMappings:
+            - DeviceName: /dev/xvda
+              Ebs:
+                VolumeSize: !Ref InstanceWorkerVolumeSize        
           IamInstanceProfile: !Ref InstanceProfile
           ImageId: !Ref InstanceWorkerImageId
           InstanceType: !Ref InstanceWorkerInstanceType
