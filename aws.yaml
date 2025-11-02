@@ -21,12 +21,14 @@ Metadata:
         Parameters:
           - InstanceMasterImageId
           - InstanceMasterInstanceType
+          - InstanceMasterVolumeSize          
       -
         Label:
           default: Cluster Worker Configuration
         Parameters:
           - InstanceWorkerImageId
           - InstanceWorkerInstanceType
+          - InstanceWorkerVolumeSize          
       -
         Label:
           default: Network Configuration
@@ -95,10 +97,14 @@ Metadata:
         default: AMI to use for Cluster Master Instances
       InstanceMasterInstanceType:
         default: Cluster Master Instance Size
+      InstanceMasterVolumeSize:
+        default: Cluster Master Volume Size        
       InstanceWorkerImageId:
         default: AMI to use for Cluster Worker Instances
       InstanceWorkerInstanceType:
         default: Cluster Worker Instance Size
+      InstanceWorkerVolumeSize:
+        default: Cluster Worker Volume Size        
       KeyPair0PublicKeyMaterial:
         default: Public SSH key for group 0 instances
       PrivateIpAddressInstanceMaster0:
@@ -831,7 +837,6 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair0
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -859,7 +864,6 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair1
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster1
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -887,7 +891,6 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair2
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster2
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -915,7 +918,6 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair3
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster3
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -943,7 +945,6 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair4
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster4
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -971,7 +972,6 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair5
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster5
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -999,7 +999,6 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      KeyName: !Ref KeyPair6
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster6
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
