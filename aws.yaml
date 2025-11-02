@@ -87,8 +87,7 @@ Metadata:
         Label:
           default: Security Configuration
         Parameters:
-          - KeyPair1PublicKeyMaterial
-          - KeyPair2PublicKeyMaterial
+          - KeyPairPublicKeyMaterial
 
     ParameterLabels:
       HostedZoneName:
@@ -105,10 +104,8 @@ Metadata:
         default: Cluster Worker Instance Size
       InstanceWorkerVolumeSize:
         default: Cluster Worker Volume Size
-      KeyPair1PublicKeyMaterial:
-        default: Public SSH key 1
-      KeyPair2PublicKeyMaterial:
-        default: Public SSH key 2
+      KeyPairPublicKeyMaterial:
+        default: Public SSH key
       PrivateIpAddressInstanceMaster0:
         default: The private IP address for Master 0
       PrivateIpAddressInstanceMaster1:
@@ -256,16 +253,10 @@ Parameters:
       Select Amazon EC2 volume size for the Cluster Worker instances.
     Type: Number
 
-  KeyPair1PublicKeyMaterial:
+  KeyPairPublicKeyMaterial:
     Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
     Description: >
-      Public SSH key 1
-    Type: String
-
-  KeyPair2PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key 2
+      Public SSH key
     Type: String
 
   PrivateIpAddressInstanceMaster0:
@@ -851,6 +842,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -2114,6 +2106,12 @@ Resources:
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
+
+  KeyPair:
+    Properties:
+      KeyName: !Sub "KeyPair-${AWS::StackName}"
+      PublicKeyMaterial: !Ref KeyPairPublicKeyMaterial
+    Type: AWS::EC2::KeyPair
 
   RecordSetMaster0:
     DependsOn: [EIPMaster0]
