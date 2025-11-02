@@ -204,7 +204,7 @@ Resources:
           ImageId: !Ref InstanceMasterImageId
           InstanceType: !Ref InstanceMasterInstanceType
           KeyName: !Ref KeyPair
-          PrivateIpAddress: !Ref PrivateIpPrefixInstanceMaster${Index}
+          PrivateIpAddress: !Sub ${PrivateIpPrefixInstanceMaster}${Index}
           SecurityGroupIds:
             - !GetAtt VPC.DefaultSecurityGroup
             - !Ref SecurityGroup
@@ -234,7 +234,7 @@ Resources:
           ImageId: !Ref InstanceWorkerImageId
           InstanceType: !Ref InstanceWorkerInstanceType
           KeyName: !Ref KeyPair
-          PrivateIpAddress: !Ref PrivateIpPrefixInstanceWorker${Index}
+          PrivateIpAddress: !Sub ${PrivateIpPrefixInstanceWorker}${Index}
           SecurityGroupIds:
             - !GetAtt VPC.DefaultSecurityGroup
             - !Ref SecurityGroup
@@ -363,5 +363,4 @@ Resources:
       VpcId: !Ref VPC
     Type: AWS::EC2::VPCGatewayAttachment
 
-Transform:
-  - AWS::LanguageExtensions
+Transform: AWS::LanguageExtensions
