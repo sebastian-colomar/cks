@@ -181,7 +181,7 @@ Resources:
         Properties:
           Domain: vpc
           InstanceId: !Ref
-            !Sub InstanceMaster${Index}
+            Fn::Sub: InstanceMaster${Index}
         Type: AWS::EC2::EIP
 
   Fn::ForEach::EIPWorker:
@@ -192,7 +192,7 @@ Resources:
         Properties:
           Domain: vpc
           InstanceId: !Ref
-            !Sub InstanceWorker${Index}
+            Fn::Sub: InstanceWorker${Index}
         Type: AWS::EC2::EIP
 
   Fn::ForEach::InstanceMaster:
@@ -256,7 +256,7 @@ Resources:
           Name: !Sub master${Index}.${HostedZoneName}
           ResourceRecords:
             - !Ref
-                !Sub EIPMaster${Index}
+                Fn::Sub: EIPMaster${Index}
           TTL: 300
           Type: A
         Type: AWS::Route53::RecordSet
@@ -273,7 +273,7 @@ Resources:
           Name: !Sub worker${Index}.${HostedZoneName}
           ResourceRecords:
             - !Ref 
-                !Sub EIPWorker${Index}
+                Fn::Sub: EIPWorker${Index}
           TTL: 300
           Type: A
         Type: AWS::Route53::RecordSet
