@@ -270,12 +270,13 @@ Resources:
     - !Ref Indices
     - 
       RecordSetMaster${Index}:
-        DependsOn: ['EIPMaster${Index}']      
+        DependsOn:
+          - !Sub 'EIPMaster${Index}'
         Properties: 
           HostedZoneName: !Sub '${HostedZoneName}.'
           Name: !Sub 'master${Index}.${HostedZoneName}'
           ResourceRecords:
-            - !GetAtt 'EIPMaster${Index}.PublicIp'
+            - !Ref !Sub 'EIPMaster${Index}'
           TTL: 300
           Type: A
         Type: AWS::Route53::RecordSet
@@ -285,12 +286,13 @@ Resources:
     - !Ref Indices
     - 
       RecordSetWorker${Index}:
-        DependsOn: ['EIPWorker${Index}']
+        DependsOn:
+          - !Sub 'EIPWorker${Index}'
         Properties: 
           HostedZoneName: !Sub '${HostedZoneName}.'
           Name: !Sub 'worker${Index}.${HostedZoneName}'
           ResourceRecords:
-            - !GetAtt 'EIPWorker${Index}.PublicIp'
+            - !Ref !Sub 'EIPWorker${Index}'
           TTL: 300
           Type: A
         Type: AWS::Route53::RecordSet
