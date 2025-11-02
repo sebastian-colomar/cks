@@ -848,14 +848,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master0.${HostedZoneName}"
@@ -875,14 +867,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master1.${HostedZoneName}"
@@ -902,14 +886,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master2.${HostedZoneName}"
@@ -929,14 +905,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master3.${HostedZoneName}"
@@ -956,14 +924,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master4.${HostedZoneName}"
@@ -983,14 +943,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master5.${HostedZoneName}"
@@ -1010,14 +962,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master6.${HostedZoneName}"
@@ -1037,14 +981,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master7.${HostedZoneName}"
@@ -1064,14 +1000,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master8.${HostedZoneName}"
@@ -1091,14 +1019,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master9.${HostedZoneName}"
@@ -1118,14 +1038,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master10.${HostedZoneName}"
@@ -1145,14 +1057,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master11.${HostedZoneName}"
@@ -1172,14 +1076,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master12.${HostedZoneName}"
@@ -1199,14 +1095,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master13.${HostedZoneName}"
@@ -1226,14 +1114,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master14.${HostedZoneName}"
@@ -1253,14 +1133,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master15.${HostedZoneName}"
@@ -1280,14 +1152,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master16.${HostedZoneName}"
@@ -1307,14 +1171,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master17.${HostedZoneName}"
@@ -1334,14 +1190,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master18.${HostedZoneName}"
@@ -1361,14 +1209,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master19.${HostedZoneName}"
@@ -1388,14 +1228,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master20.${HostedZoneName}"
@@ -1415,14 +1247,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master21.${HostedZoneName}"
@@ -1442,14 +1266,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master22.${HostedZoneName}"
@@ -1475,14 +1291,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker0.${HostedZoneName}"
@@ -1503,14 +1311,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker1.${HostedZoneName}"
@@ -1531,14 +1331,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker2.${HostedZoneName}"
@@ -1559,14 +1351,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker3.${HostedZoneName}"
@@ -1587,14 +1371,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker4.${HostedZoneName}"
@@ -1615,14 +1391,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker5.${HostedZoneName}"
@@ -1643,14 +1411,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker6.${HostedZoneName}"
@@ -1671,14 +1431,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker7.${HostedZoneName}"
@@ -1699,14 +1451,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker8.${HostedZoneName}"
@@ -1727,14 +1471,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker9.${HostedZoneName}"
@@ -1755,14 +1491,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker10.${HostedZoneName}"
@@ -1783,14 +1511,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker11.${HostedZoneName}"
@@ -1811,14 +1531,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker12.${HostedZoneName}"
@@ -1839,14 +1551,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker13.${HostedZoneName}"
@@ -1867,14 +1571,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker14.${HostedZoneName}"
@@ -1895,14 +1591,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker15.${HostedZoneName}"
@@ -1923,14 +1611,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker16.${HostedZoneName}"
@@ -1951,14 +1631,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker17.${HostedZoneName}"
@@ -1979,14 +1651,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker18.${HostedZoneName}"
@@ -2007,14 +1671,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker19.${HostedZoneName}"
@@ -2035,14 +1691,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker20.${HostedZoneName}"
@@ -2063,14 +1711,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker21.${HostedZoneName}"
@@ -2091,14 +1731,6 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
-      UserData:
-        'Fn::Base64': !Sub |
-          users:
-            - default
-            - name: ubuntu
-              ssh_authorized_keys:
-                - ${KeyPair1PublicKeyMaterial}
-                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker22.${HostedZoneName}"
