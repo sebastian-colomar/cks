@@ -85,29 +85,8 @@ Metadata:
         Label:
           default: Security Configuration
         Parameters:
-          - KeyPair0PublicKeyMaterial         
           - KeyPair1PublicKeyMaterial         
           - KeyPair2PublicKeyMaterial         
-          - KeyPair3PublicKeyMaterial         
-          - KeyPair4PublicKeyMaterial         
-          - KeyPair5PublicKeyMaterial         
-          - KeyPair6PublicKeyMaterial         
-          - KeyPair7PublicKeyMaterial         
-          - KeyPair8PublicKeyMaterial         
-          - KeyPair9PublicKeyMaterial         
-          - KeyPair10PublicKeyMaterial         
-          - KeyPair11PublicKeyMaterial         
-          - KeyPair12PublicKeyMaterial         
-          - KeyPair13PublicKeyMaterial         
-          - KeyPair14PublicKeyMaterial         
-          - KeyPair15PublicKeyMaterial         
-          - KeyPair16PublicKeyMaterial         
-          - KeyPair17PublicKeyMaterial         
-          - KeyPair18PublicKeyMaterial         
-          - KeyPair19PublicKeyMaterial         
-          - KeyPair20PublicKeyMaterial         
-          - KeyPair21PublicKeyMaterial         
-          - KeyPair22PublicKeyMaterial         
           
     ParameterLabels:
       HostedZoneName:
@@ -230,7 +209,7 @@ Parameters:
     Type: String
 
   InstanceMasterImageId:
-    Default: ami-02d26659fd82cf299 #MUMBAI #UBUNTU24
+    Default: ami-02b8269d5e85954ef #MUMBAI #UBUNTU24
     Description: >
       Select AMI to use for the Cluster Master instances. 
       When it's left blank, the default AMI for your AWS region will be used. 
@@ -244,7 +223,7 @@ Parameters:
     Type: String
     
   InstanceWorkerImageId:
-    Default: ami-02d26659fd82cf299 #MUMBAI #UBUNTU24
+    Default: ami-02b8269d5e85954ef #MUMBAI #UBUNTU24
     Description: >
       Select AMI to use for the Cluster Worker instances. 
       When it's left blank, the default AMI for your AWS region will be used. 
@@ -252,15 +231,9 @@ Parameters:
     Type: String
     
   InstanceWorkerInstanceType:
-    Default: 't3a.micro'
+    Default: 't3a.small'
     Description: >
       Select Amazon EC2 instance type for the Cluster Worker instances.
-    Type: String
-
-  KeyPair0PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 0 instances.
     Type: String
 
   KeyPair1PublicKeyMaterial:
@@ -273,126 +246,6 @@ Parameters:
     Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
     Description: >
       Public SSH key used to access the group 2 instances.
-    Type: String
-
-  KeyPair3PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 3 instances.
-    Type: String
-
-  KeyPair4PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 4 instances.
-    Type: String
-
-  KeyPair5PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 5 instances.
-    Type: String
-
-  KeyPair6PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 6 instances.
-    Type: String
-
-  KeyPair7PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 7 instances.
-    Type: String
-
-  KeyPair8PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 8 instances.
-    Type: String
-
-  KeyPair9PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 9 instances.
-    Type: String
-
-  KeyPair10PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 10 instances.
-    Type: String
-
-  KeyPair11PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 11 instances.
-    Type: String
-
-  KeyPair12PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 12 instances.
-    Type: String
-
-  KeyPair13PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 13 instances.
-    Type: String
-
-  KeyPair14PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 14 instances.
-    Type: String
-
-  KeyPair15PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 15 instances.
-    Type: String
-
-  KeyPair16PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 16 instances.
-    Type: String
-
-  KeyPair17PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 17 instances.
-    Type: String
-
-  KeyPair18PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 18 instances.
-    Type: String
-
-  KeyPair19PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 19 instances.
-    Type: String
-
-  KeyPair20PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 20 instances.
-    Type: String
-
-  KeyPair21PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 21 instances.
-    Type: String
-
-  KeyPair22PublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the group 22 instances.
     Type: String
 
   PrivateIpAddressInstanceMaster0:
@@ -984,6 +837,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master0.${HostedZoneName}"
@@ -991,6 +852,10 @@ Resources:
 
   InstanceMaster1:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1000,6 +865,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master1.${HostedZoneName}"
@@ -1007,6 +880,10 @@ Resources:
 
   InstanceMaster2:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1016,6 +893,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master2.${HostedZoneName}"
@@ -1023,6 +908,10 @@ Resources:
 
   InstanceMaster3:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1032,6 +921,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master3.${HostedZoneName}"
@@ -1039,6 +936,10 @@ Resources:
 
   InstanceMaster4:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1048,6 +949,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master4.${HostedZoneName}"
@@ -1055,6 +964,10 @@ Resources:
 
   InstanceMaster5:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1064,6 +977,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master5.${HostedZoneName}"
@@ -1071,6 +992,10 @@ Resources:
 
   InstanceMaster6:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1080,6 +1005,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master6.${HostedZoneName}"
@@ -1087,6 +1020,10 @@ Resources:
 
   InstanceMaster7:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1096,6 +1033,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master7.${HostedZoneName}"
@@ -1103,6 +1048,10 @@ Resources:
 
   InstanceMaster8:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1112,6 +1061,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master8.${HostedZoneName}"
@@ -1119,6 +1076,10 @@ Resources:
 
   InstanceMaster9:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1128,6 +1089,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master9.${HostedZoneName}"
@@ -1135,6 +1104,10 @@ Resources:
 
   InstanceMaster10:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1144,6 +1117,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master10.${HostedZoneName}"
@@ -1151,6 +1132,10 @@ Resources:
 
   InstanceMaster11:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1160,6 +1145,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master11.${HostedZoneName}"
@@ -1167,6 +1160,10 @@ Resources:
 
   InstanceMaster12:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1176,6 +1173,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master12.${HostedZoneName}"
@@ -1183,6 +1188,10 @@ Resources:
 
   InstanceMaster13:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1192,6 +1201,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master13.${HostedZoneName}"
@@ -1199,6 +1216,10 @@ Resources:
 
   InstanceMaster14:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1208,6 +1229,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master14.${HostedZoneName}"
@@ -1215,6 +1244,10 @@ Resources:
 
   InstanceMaster15:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1224,6 +1257,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master15.${HostedZoneName}"
@@ -1231,6 +1272,10 @@ Resources:
 
   InstanceMaster16:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1240,6 +1285,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master16.${HostedZoneName}"
@@ -1247,6 +1300,10 @@ Resources:
 
   InstanceMaster17:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1256,6 +1313,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master17.${HostedZoneName}"
@@ -1263,6 +1328,10 @@ Resources:
 
   InstanceMaster18:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1272,6 +1341,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master18.${HostedZoneName}"
@@ -1279,6 +1356,10 @@ Resources:
 
   InstanceMaster19:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1288,6 +1369,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master19.${HostedZoneName}"
@@ -1295,6 +1384,10 @@ Resources:
 
   InstanceMaster20:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1304,6 +1397,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master20.${HostedZoneName}"
@@ -1311,6 +1412,10 @@ Resources:
 
   InstanceMaster21:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1320,6 +1425,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master21.${HostedZoneName}"
@@ -1327,6 +1440,10 @@ Resources:
 
   InstanceMaster22:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
@@ -1336,6 +1453,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "master22.${HostedZoneName}"
@@ -1349,6 +1474,10 @@ Resources:
   InstanceWorker0:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1358,6 +1487,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker0.${HostedZoneName}"
@@ -1366,6 +1503,10 @@ Resources:
   InstanceWorker1:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1375,6 +1516,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker1.${HostedZoneName}"
@@ -1383,6 +1532,10 @@ Resources:
   InstanceWorker2:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1392,6 +1545,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker2.${HostedZoneName}"
@@ -1400,6 +1561,10 @@ Resources:
   InstanceWorker3:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1409,6 +1574,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker3.${HostedZoneName}"
@@ -1417,6 +1590,10 @@ Resources:
   InstanceWorker4:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1426,6 +1603,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker4.${HostedZoneName}"
@@ -1434,6 +1619,10 @@ Resources:
   InstanceWorker5:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1443,6 +1632,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker5.${HostedZoneName}"
@@ -1451,6 +1648,10 @@ Resources:
   InstanceWorker6:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1460,6 +1661,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker6.${HostedZoneName}"
@@ -1468,6 +1677,10 @@ Resources:
   InstanceWorker7:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1477,6 +1690,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker7.${HostedZoneName}"
@@ -1485,6 +1706,10 @@ Resources:
   InstanceWorker8:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1494,6 +1719,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker8.${HostedZoneName}"
@@ -1502,6 +1735,10 @@ Resources:
   InstanceWorker9:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1511,6 +1748,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker9.${HostedZoneName}"
@@ -1519,6 +1764,10 @@ Resources:
   InstanceWorker10:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1528,6 +1777,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker10.${HostedZoneName}"
@@ -1536,6 +1793,10 @@ Resources:
   InstanceWorker11:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1545,6 +1806,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker11.${HostedZoneName}"
@@ -1553,6 +1822,10 @@ Resources:
   InstanceWorker12:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1562,6 +1835,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker12.${HostedZoneName}"
@@ -1570,6 +1851,10 @@ Resources:
   InstanceWorker13:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1579,6 +1864,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker13.${HostedZoneName}"
@@ -1587,6 +1880,10 @@ Resources:
   InstanceWorker14:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1596,6 +1893,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker14.${HostedZoneName}"
@@ -1604,6 +1909,10 @@ Resources:
   InstanceWorker15:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1613,6 +1922,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker15.${HostedZoneName}"
@@ -1621,6 +1938,10 @@ Resources:
   InstanceWorker16:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1630,6 +1951,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker16.${HostedZoneName}"
@@ -1638,6 +1967,10 @@ Resources:
   InstanceWorker17:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1647,6 +1980,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker17.${HostedZoneName}"
@@ -1655,6 +1996,10 @@ Resources:
   InstanceWorker18:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1664,6 +2009,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker18.${HostedZoneName}"
@@ -1672,6 +2025,10 @@ Resources:
   InstanceWorker19:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1681,6 +2038,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker19.${HostedZoneName}"
@@ -1689,6 +2054,10 @@ Resources:
   InstanceWorker20:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1698,6 +2067,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker20.${HostedZoneName}"
@@ -1706,6 +2083,10 @@ Resources:
   InstanceWorker21:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1715,6 +2096,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker21.${HostedZoneName}"
@@ -1723,6 +2112,10 @@ Resources:
   InstanceWorker22:
     DependsOn: [VPCGatewayAttachment]  
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize        
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
@@ -1732,6 +2125,14 @@ Resources:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
+      UserData:
+        'Fn::Base64': !Sub |
+          users:
+            - default
+            - name: ubuntu
+              ssh_authorized_keys:
+                - ${KeyPair1PublicKeyMaterial}
+                - ${KeyPair2PublicKeyMaterial}
       Tags:
         - Key: Name
           Value: !Sub "worker22.${HostedZoneName}"
@@ -1740,142 +2141,10 @@ Resources:
   InternetGateway:
     Type: AWS::EC2::InternetGateway
 
-  KeyPair0:
-    Properties:
-      KeyName: !Sub "KeyPair0-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair0PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
   KeyPair1:
     Properties:
       KeyName: !Sub "KeyPair1-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair1PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair2:
-    Properties:
-      KeyName: !Sub "KeyPair2-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair2PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair3:
-    Properties:
-      KeyName: !Sub "KeyPair3-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair3PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair4:
-    Properties:
-      KeyName: !Sub "KeyPair4-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair4PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair5:
-    Properties:
-      KeyName: !Sub "KeyPair5-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair5PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair6:
-    Properties:
-      KeyName: !Sub "KeyPair6-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair6PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair7:
-    Properties:
-      KeyName: !Sub "KeyPair7-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair7PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair8:
-    Properties:
-      KeyName: !Sub "KeyPair8-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair8PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair9:
-    Properties:
-      KeyName: !Sub "KeyPair9-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair9PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair10:
-    Properties:
-      KeyName: !Sub "KeyPair10-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair10PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair11:
-    Properties:
-      KeyName: !Sub "KeyPair11-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair11PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair12:
-    Properties:
-      KeyName: !Sub "KeyPair12-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair12PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair13:
-    Properties:
-      KeyName: !Sub "KeyPair13-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair13PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair14:
-    Properties:
-      KeyName: !Sub "KeyPair14-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair14PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair15:
-    Properties:
-      KeyName: !Sub "KeyPair15-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair15PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair16:
-    Properties:
-      KeyName: !Sub "KeyPair16-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair16PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair17:
-    Properties:
-      KeyName: !Sub "KeyPair17-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair17PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair18:
-    Properties:
-      KeyName: !Sub "KeyPair18-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair18PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair19:
-    Properties:
-      KeyName: !Sub "KeyPair19-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair19PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair20:
-    Properties:
-      KeyName: !Sub "KeyPair20-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair20PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair21:
-    Properties:
-      KeyName: !Sub "KeyPair21-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair21PublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
-  KeyPair22:
-    Properties:
-      KeyName: !Sub "KeyPair22-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPair22PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   RecordSetMaster0:
