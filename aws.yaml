@@ -34,16 +34,16 @@ Metadata:
           default: Network Configuration
         Parameters:
           - HostedZoneName
-          - PrivateIpAddressInstanceMaster0
-          - PrivateIpAddressInstanceMaster1
-          - PrivateIpAddressInstanceMaster2
-          - PrivateIpAddressInstanceMaster3
-          - PrivateIpAddressInstanceMaster4
-          - PrivateIpAddressInstanceMaster5
-          - PrivateIpAddressInstanceMaster6
-          - PrivateIpAddressInstanceMaster7
-          - PrivateIpAddressInstanceMaster8
-          - PrivateIpAddressInstanceMaster9
+          - PrivateIpAddressInstanceMaster00
+          - PrivateIpAddressInstanceMaster01
+          - PrivateIpAddressInstanceMaster02
+          - PrivateIpAddressInstanceMaster03
+          - PrivateIpAddressInstanceMaster04
+          - PrivateIpAddressInstanceMaster05
+          - PrivateIpAddressInstanceMaster06
+          - PrivateIpAddressInstanceMaster07
+          - PrivateIpAddressInstanceMaster08
+          - PrivateIpAddressInstanceMaster09
           - PrivateIpAddressInstanceMaster10
           - PrivateIpAddressInstanceMaster11
           - PrivateIpAddressInstanceMaster12
@@ -57,16 +57,16 @@ Metadata:
           - PrivateIpAddressInstanceMaster20
           - PrivateIpAddressInstanceMaster21
           - PrivateIpAddressInstanceMaster22
-          - PrivateIpAddressInstanceWorker0
-          - PrivateIpAddressInstanceWorker1
-          - PrivateIpAddressInstanceWorker2
-          - PrivateIpAddressInstanceWorker3
-          - PrivateIpAddressInstanceWorker4
-          - PrivateIpAddressInstanceWorker5
-          - PrivateIpAddressInstanceWorker6
-          - PrivateIpAddressInstanceWorker7
-          - PrivateIpAddressInstanceWorker8
-          - PrivateIpAddressInstanceWorker9
+          - PrivateIpAddressInstanceWorker00
+          - PrivateIpAddressInstanceWorker01
+          - PrivateIpAddressInstanceWorker02
+          - PrivateIpAddressInstanceWorker03
+          - PrivateIpAddressInstanceWorker04
+          - PrivateIpAddressInstanceWorker05
+          - PrivateIpAddressInstanceWorker06
+          - PrivateIpAddressInstanceWorker07
+          - PrivateIpAddressInstanceWorker08
+          - PrivateIpAddressInstanceWorker09
           - PrivateIpAddressInstanceWorker10
           - PrivateIpAddressInstanceWorker11
           - PrivateIpAddressInstanceWorker12
@@ -106,26 +106,26 @@ Metadata:
         default: Cluster Worker Volume Size
       KeyPairPublicKeyMaterial:
         default: Public SSH key
-      PrivateIpAddressInstanceMaster0:
-        default: The private IP address for Master 0
-      PrivateIpAddressInstanceMaster1:
-        default: The private IP address for Master 1
-      PrivateIpAddressInstanceMaster2:
-        default: The private IP address for Master 2
-      PrivateIpAddressInstanceMaster3:
-        default: The private IP address for Master 3
-      PrivateIpAddressInstanceMaster4:
-        default: The private IP address for Master 4
-      PrivateIpAddressInstanceMaster5:
-        default: The private IP address for Master 5
-      PrivateIpAddressInstanceMaster6:
-        default: The private IP address for Master 6
-      PrivateIpAddressInstanceMaster7:
-        default: The private IP address for Master 7
-      PrivateIpAddressInstanceMaster8:
-        default: The private IP address for Master 8
-      PrivateIpAddressInstanceMaster9:
-        default: The private IP address for Master 9
+      PrivateIpAddressInstanceMaster00:
+        default: The private IP address for Master 00
+      PrivateIpAddressInstanceMaster01:
+        default: The private IP address for Master 01
+      PrivateIpAddressInstanceMaster02:
+        default: The private IP address for Master 02
+      PrivateIpAddressInstanceMaster03:
+        default: The private IP address for Master 03
+      PrivateIpAddressInstanceMaster04:
+        default: The private IP address for Master 04
+      PrivateIpAddressInstanceMaster05:
+        default: The private IP address for Master 05
+      PrivateIpAddressInstanceMaster06:
+        default: The private IP address for Master 06
+      PrivateIpAddressInstanceMaster07:
+        default: The private IP address for Master 07
+      PrivateIpAddressInstanceMaster08:
+        default: The private IP address for Master 08
+      PrivateIpAddressInstanceMaster09:
+        default: The private IP address for Master 09
       PrivateIpAddressInstanceMaster10:
         default: The private IP address for Master 10
       PrivateIpAddressInstanceMaster11:
@@ -152,26 +152,26 @@ Metadata:
         default: The private IP address for Master 21
       PrivateIpAddressInstanceMaster22:
         default: The private IP address for Master 22
-      PrivateIpAddressInstanceWorker0:
-        default: The private IP address for Worker 0
-      PrivateIpAddressInstanceWorker1:
-        default: The private IP address for Worker 1
-      PrivateIpAddressInstanceWorker2:
-        default: The private IP address for Worker 2
-      PrivateIpAddressInstanceWorker3:
-        default: The private IP address for Worker 3
-      PrivateIpAddressInstanceWorker4:
-        default: The private IP address for Worker 4
-      PrivateIpAddressInstanceWorker5:
-        default: The private IP address for Worker 5
-      PrivateIpAddressInstanceWorker6:
-        default: The private IP address for Worker 6
-      PrivateIpAddressInstanceWorker7:
-        default: The private IP address for Worker 7
-      PrivateIpAddressInstanceWorker8:
-        default: The private IP address for Worker 8
-      PrivateIpAddressInstanceWorker9:
-        default: The private IP address for Worker 9
+      PrivateIpAddressInstanceWorker00:
+        default: The private IP address for Worker 00
+      PrivateIpAddressInstanceWorker01:
+        default: The private IP address for Worker 01
+      PrivateIpAddressInstanceWorker02:
+        default: The private IP address for Worker 02
+      PrivateIpAddressInstanceWorker03:
+        default: The private IP address for Worker 03
+      PrivateIpAddressInstanceWorker04:
+        default: The private IP address for Worker 04
+      PrivateIpAddressInstanceWorker05:
+        default: The private IP address for Worker 05
+      PrivateIpAddressInstanceWorker06:
+        default: The private IP address for Worker 06
+      PrivateIpAddressInstanceWorker07:
+        default: The private IP address for Worker 07
+      PrivateIpAddressInstanceWorker08:
+        default: The private IP address for Worker 08
+      PrivateIpAddressInstanceWorker09:
+        default: The private IP address for Worker 09
       PrivateIpAddressInstanceWorker10:
         default: The private IP address for Worker 10
       PrivateIpAddressInstanceWorker11:
@@ -259,64 +259,64 @@ Parameters:
       Public SSH key
     Type: String
 
-  PrivateIpAddressInstanceMaster0:
+  PrivateIpAddressInstanceMaster00:
     Default: 10.168.2.100
     Description: >
-      The private IP address for Master 0.
+      The private IP address for Master 00.
     Type: String
 
-  PrivateIpAddressInstanceMaster1:
+  PrivateIpAddressInstanceMaster01:
     Default: 10.168.2.101
     Description: >
-      The private IP address for Master 1.
+      The private IP address for Master 01.
     Type: String
 
-  PrivateIpAddressInstanceMaster2:
+  PrivateIpAddressInstanceMaster02:
     Default: 10.168.2.102
     Description: >
-      The private IP address for Master 2.
+      The private IP address for Master 02.
     Type: String
 
-  PrivateIpAddressInstanceMaster3:
+  PrivateIpAddressInstanceMaster03:
     Default: 10.168.2.103
     Description: >
-      The private IP address for Master 3.
+      The private IP address for Master 03.
     Type: String
 
-  PrivateIpAddressInstanceMaster4:
+  PrivateIpAddressInstanceMaster04:
     Default: 10.168.2.104
     Description: >
-      The private IP address for Master 4.
+      The private IP address for Master 04.
     Type: String
 
-  PrivateIpAddressInstanceMaster5:
+  PrivateIpAddressInstanceMaster05:
     Default: 10.168.2.105
     Description: >
-      The private IP address for Master 5.
+      The private IP address for Master 05.
     Type: String
 
-  PrivateIpAddressInstanceMaster6:
+  PrivateIpAddressInstanceMaster06:
     Default: 10.168.2.106
     Description: >
-      The private IP address for Master 6.
+      The private IP address for Master 06.
     Type: String
 
-  PrivateIpAddressInstanceMaster7:
+  PrivateIpAddressInstanceMaster07:
     Default: 10.168.2.107
     Description: >
-      The private IP address for Master 7.
+      The private IP address for Master 07.
     Type: String
 
-  PrivateIpAddressInstanceMaster8:
+  PrivateIpAddressInstanceMaster08:
     Default: 10.168.2.108
     Description: >
-      The private IP address for Master 8.
+      The private IP address for Master 08.
     Type: String
 
-  PrivateIpAddressInstanceMaster9:
+  PrivateIpAddressInstanceMaster09:
     Default: 10.168.2.109
     Description: >
-      The private IP address for Master 9.
+      The private IP address for Master 09.
     Type: String
 
   PrivateIpAddressInstanceMaster10:
@@ -397,64 +397,64 @@ Parameters:
       The private IP address for Master 22.
     Type: String
 
-  PrivateIpAddressInstanceWorker0:
+  PrivateIpAddressInstanceWorker00:
     Default: 10.168.2.200
     Description: >
-      The private IP address for Worker 0.
+      The private IP address for Worker 00.
     Type: String
 
-  PrivateIpAddressInstanceWorker1:
+  PrivateIpAddressInstanceWorker01:
     Default: 10.168.2.201
     Description: >
-      The private IP address for Worker 1.
+      The private IP address for Worker 01.
     Type: String
 
-  PrivateIpAddressInstanceWorker2:
+  PrivateIpAddressInstanceWorker02:
     Default: 10.168.2.202
     Description: >
-      The private IP address for Worker 2.
+      The private IP address for Worker 02.
     Type: String
 
-  PrivateIpAddressInstanceWorker3:
+  PrivateIpAddressInstanceWorker03:
     Default: 10.168.2.203
     Description: >
-      The private IP address for Worker 3.
+      The private IP address for Worker 03.
     Type: String
 
-  PrivateIpAddressInstanceWorker4:
+  PrivateIpAddressInstanceWorker04:
     Default: 10.168.2.204
     Description: >
-      The private IP address for Worker 4.
+      The private IP address for Worker 04.
     Type: String
 
-  PrivateIpAddressInstanceWorker5:
+  PrivateIpAddressInstanceWorker05:
     Default: 10.168.2.205
     Description: >
-      The private IP address for Worker 5.
+      The private IP address for Worker 05.
     Type: String
 
-  PrivateIpAddressInstanceWorker6:
+  PrivateIpAddressInstanceWorker06:
     Default: 10.168.2.206
     Description: >
-      The private IP address for Worker 6.
+      The private IP address for Worker 06.
     Type: String
 
-  PrivateIpAddressInstanceWorker7:
+  PrivateIpAddressInstanceWorker07:
     Default: 10.168.2.207
     Description: >
-      The private IP address for Worker 7.
+      The private IP address for Worker 07.
     Type: String
 
-  PrivateIpAddressInstanceWorker8:
+  PrivateIpAddressInstanceWorker08:
     Default: 10.168.2.208
     Description: >
-      The private IP address for Worker 8.
+      The private IP address for Worker 08.
     Type: String
 
-  PrivateIpAddressInstanceWorker9:
+  PrivateIpAddressInstanceWorker09:
     Default: 10.168.2.209
     Description: >
-      The private IP address for Worker 9.
+      The private IP address for Worker 09.
     Type: String
 
   PrivateIpAddressInstanceWorker10:
@@ -561,64 +561,64 @@ Parameters:
 #============================================================
 Resources:
 
-  EIPMaster0:
+  EIPMaster00:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster0
+      InstanceId: !Ref InstanceMaster00
     Type: AWS::EC2::EIP
 
-  EIPMaster1:
+  EIPMaster01:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster1
+      InstanceId: !Ref InstanceMaster01
     Type: AWS::EC2::EIP
 
-  EIPMaster2:
+  EIPMaster02:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster2
+      InstanceId: !Ref InstanceMaster02
     Type: AWS::EC2::EIP
 
-  EIPMaster3:
+  EIPMaster03:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster3
+      InstanceId: !Ref InstanceMaster03
     Type: AWS::EC2::EIP
 
-  EIPMaster4:
+  EIPMaster04:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster4
+      InstanceId: !Ref InstanceMaster04
     Type: AWS::EC2::EIP
 
-  EIPMaster5:
+  EIPMaster05:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster5
+      InstanceId: !Ref InstanceMaster05
     Type: AWS::EC2::EIP
 
-  EIPMaster6:
+  EIPMaster06:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster6
+      InstanceId: !Ref InstanceMaster06
     Type: AWS::EC2::EIP
 
-  EIPMaster7:
+  EIPMaster07:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster7
+      InstanceId: !Ref InstanceMaster07
     Type: AWS::EC2::EIP
 
-  EIPMaster8:
+  EIPMaster08:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster8
+      InstanceId: !Ref InstanceMaster08
     Type: AWS::EC2::EIP
 
-  EIPMaster9:
+  EIPMaster09:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceMaster9
+      InstanceId: !Ref InstanceMaster09
     Type: AWS::EC2::EIP
 
   EIPMaster10:
@@ -699,64 +699,64 @@ Resources:
       InstanceId: !Ref InstanceMaster22
     Type: AWS::EC2::EIP
 
-  EIPWorker0:
+  EIPWorker00:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker0
+      InstanceId: !Ref InstanceWorker00
     Type: AWS::EC2::EIP
 
-  EIPWorker1:
+  EIPWorker01:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker1
+      InstanceId: !Ref InstanceWorker01
     Type: AWS::EC2::EIP
 
-  EIPWorker2:
+  EIPWorker02:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker2
+      InstanceId: !Ref InstanceWorker02
     Type: AWS::EC2::EIP
 
-  EIPWorker3:
+  EIPWorker03:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker3
+      InstanceId: !Ref InstanceWorker03
     Type: AWS::EC2::EIP
 
-  EIPWorker4:
+  EIPWorker04:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker4
+      InstanceId: !Ref InstanceWorker04
     Type: AWS::EC2::EIP
 
-  EIPWorker5:
+  EIPWorker05:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker5
+      InstanceId: !Ref InstanceWorker05
     Type: AWS::EC2::EIP
 
-  EIPWorker6:
+  EIPWorker06:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker6
+      InstanceId: !Ref InstanceWorker06
     Type: AWS::EC2::EIP
 
-  EIPWorker7:
+  EIPWorker07:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker7
+      InstanceId: !Ref InstanceWorker07
     Type: AWS::EC2::EIP
 
-  EIPWorker8:
+  EIPWorker08:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker8
+      InstanceId: !Ref InstanceWorker08
     Type: AWS::EC2::EIP
 
-  EIPWorker9:
+  EIPWorker09:
     Properties:
       Domain: vpc
-      InstanceId: !Ref InstanceWorker9
+      InstanceId: !Ref InstanceWorker09
     Type: AWS::EC2::EIP
 
   EIPWorker10:
@@ -837,23 +837,23 @@ Resources:
       InstanceId: !Ref InstanceWorker22
     Type: AWS::EC2::EIP
 
-  InstanceMaster0:
+  InstanceMaster00:
     Properties:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
       KeyName: !Ref KeyPair
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster0
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster00
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master0.${HostedZoneName}"
+          Value: !Sub "master00.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceMaster1:
+  InstanceMaster01:
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -862,17 +862,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster1
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster01
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master1.${HostedZoneName}"
+          Value: !Sub "master01.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceMaster2:
+  InstanceMaster02:
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -881,17 +881,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster2
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster02
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master2.${HostedZoneName}"
+          Value: !Sub "master02.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceMaster3:
+  InstanceMaster03:
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -900,17 +900,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster3
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster03
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master3.${HostedZoneName}"
+          Value: !Sub "master03.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceMaster4:
+  InstanceMaster04:
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -919,17 +919,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster4
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster04
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master4.${HostedZoneName}"
+          Value: !Sub "master04.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceMaster5:
+  InstanceMaster05:
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -938,17 +938,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster5
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster05
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master5.${HostedZoneName}"
+          Value: !Sub "master05.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceMaster6:
+  InstanceMaster06:
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -957,17 +957,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster6
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster06
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master6.${HostedZoneName}"
+          Value: !Sub "master06.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceMaster7:
+  InstanceMaster07:
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -976,17 +976,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster7
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster07
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master7.${HostedZoneName}"
+          Value: !Sub "master07.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceMaster8:
+  InstanceMaster08:
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -995,17 +995,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster8
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster08
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master8.${HostedZoneName}"
+          Value: !Sub "master08.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceMaster9:
+  InstanceMaster09:
     Properties:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -1014,14 +1014,14 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster9
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster09
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "master9.${HostedZoneName}"
+          Value: !Sub "master09.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
   InstanceMaster10:
@@ -1276,7 +1276,7 @@ Resources:
       Roles: [!Ref Role]
     Type: AWS::IAM::InstanceProfile
 
-  InstanceWorker0:
+  InstanceWorker00:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1286,17 +1286,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker0
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker00
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker0.${HostedZoneName}"
+          Value: !Sub "worker00.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceWorker1:
+  InstanceWorker01:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1306,17 +1306,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker1
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker01
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker1.${HostedZoneName}"
+          Value: !Sub "worker01.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceWorker2:
+  InstanceWorker02:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1326,17 +1326,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker2
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker02
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker2.${HostedZoneName}"
+          Value: !Sub "worker02.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceWorker3:
+  InstanceWorker03:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1346,17 +1346,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker3
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker03
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker3.${HostedZoneName}"
+          Value: !Sub "worker03.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceWorker4:
+  InstanceWorker04:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1366,17 +1366,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker4
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker04
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker4.${HostedZoneName}"
+          Value: !Sub "worker04.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceWorker5:
+  InstanceWorker05:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1386,17 +1386,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker5
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker05
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker5.${HostedZoneName}"
+          Value: !Sub "worker05.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceWorker6:
+  InstanceWorker06:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1406,17 +1406,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker6
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker06
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker6.${HostedZoneName}"
+          Value: !Sub "worker06.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceWorker7:
+  InstanceWorker07:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1426,17 +1426,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker7
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker07
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker7.${HostedZoneName}"
+          Value: !Sub "worker07.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceWorker8:
+  InstanceWorker08:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1446,17 +1446,17 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker8
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker08
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker8.${HostedZoneName}"
+          Value: !Sub "worker08.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
-  InstanceWorker9:
+  InstanceWorker09:
     DependsOn: [VPCGatewayAttachment]
     Properties:
       BlockDeviceMappings:
@@ -1466,14 +1466,14 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
       InstanceType: !Ref InstanceWorkerInstanceType
-      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker9
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker09
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
         - !Ref SecurityGroup
       SubnetId: !Ref SubnetPublic
       Tags:
         - Key: Name
-          Value: !Sub "worker9.${HostedZoneName}"
+          Value: !Sub "worker09.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
   InstanceWorker10:
@@ -1745,112 +1745,112 @@ Resources:
       PublicKeyMaterial: !Ref KeyPairPublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
-  RecordSetMaster0:
+  RecordSetMaster00:
     DependsOn: [EIPMaster0]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master0.${HostedZoneName}'
+      Name: !Sub 'master00.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster0
+        - !Ref EIPMaster00
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetMaster1:
+  RecordSetMaster01:
     DependsOn: [EIPMaster1]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master1.${HostedZoneName}'
+      Name: !Sub 'master01.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster1
+        - !Ref EIPMaster01
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetMaster2:
+  RecordSetMaster02:
     DependsOn: [EIPMaster2]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master2.${HostedZoneName}'
+      Name: !Sub 'master02.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster2
+        - !Ref EIPMaster02
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetMaster3:
+  RecordSetMaster03:
     DependsOn: [EIPMaster3]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master3.${HostedZoneName}'
+      Name: !Sub 'master03.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster3
+        - !Ref EIPMaster03
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetMaster4:
+  RecordSetMaster04:
     DependsOn: [EIPMaster4]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master4.${HostedZoneName}'
+      Name: !Sub 'master04.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster4
+        - !Ref EIPMaster04
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetMaster5:
+  RecordSetMaster05:
     DependsOn: [EIPMaster5]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master5.${HostedZoneName}'
+      Name: !Sub 'master05.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster5
+        - !Ref EIPMaster05
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetMaster6:
+  RecordSetMaster06:
     DependsOn: [EIPMaster6]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master6.${HostedZoneName}'
+      Name: !Sub 'master06.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster6
+        - !Ref EIPMaster06
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetMaster7:
+  RecordSetMaster07:
     DependsOn: [EIPMaster7]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master7.${HostedZoneName}'
+      Name: !Sub 'master07.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster7
+        - !Ref EIPMaster07
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetMaster8:
+  RecordSetMaster08:
     DependsOn: [EIPMaster8]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master8.${HostedZoneName}'
+      Name: !Sub 'master08.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster8
+        - !Ref EIPMaster08
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetMaster9:
+  RecordSetMaster09:
     DependsOn: [EIPMaster9]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'master9.${HostedZoneName}'
+      Name: !Sub 'master09.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPMaster9
+        - !Ref EIPMaster09
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
@@ -1998,112 +1998,112 @@ Resources:
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker0:
-    DependsOn: [EIPWorker0]
+  RecordSetWorker00:
+    DependsOn: [EIPWorker00]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker0.${HostedZoneName}'
+      Name: !Sub 'worker00.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker0
+        - !Ref EIPWorker00
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker1:
-    DependsOn: [EIPWorker1]
+  RecordSetWorker01:
+    DependsOn: [EIPWorker01]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker1.${HostedZoneName}'
+      Name: !Sub 'worker01.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker1
+        - !Ref EIPWorker01
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker2:
-    DependsOn: [EIPWorker2]
+  RecordSetWorker02:
+    DependsOn: [EIPWorker02]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker2.${HostedZoneName}'
+      Name: !Sub 'worker02.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker2
+        - !Ref EIPWorker02
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker3:
-    DependsOn: [EIPWorker3]
+  RecordSetWorker03:
+    DependsOn: [EIPWorker03]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker3.${HostedZoneName}'
+      Name: !Sub 'worker03.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker3
+        - !Ref EIPWorker03
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker4:
-    DependsOn: [EIPWorker4]
+  RecordSetWorker04:
+    DependsOn: [EIPWorker04]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker4.${HostedZoneName}'
+      Name: !Sub 'worker04.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker4
+        - !Ref EIPWorker04
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker5:
-    DependsOn: [EIPWorker5]
+  RecordSetWorker05:
+    DependsOn: [EIPWorker05]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker5.${HostedZoneName}'
+      Name: !Sub 'worker05.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker5
+        - !Ref EIPWorker05
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker6:
-    DependsOn: [EIPWorker6]
+  RecordSetWorker06:
+    DependsOn: [EIPWorker06]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker6.${HostedZoneName}'
+      Name: !Sub 'worker06.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker6
+        - !Ref EIPWorker06
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker7:
-    DependsOn: [EIPWorker7]
+  RecordSetWorker07:
+    DependsOn: [EIPWorker07]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker7.${HostedZoneName}'
+      Name: !Sub 'worker07.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker7
+        - !Ref EIPWorker07
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker8:
-    DependsOn: [EIPWorker8]
+  RecordSetWorker08:
+    DependsOn: [EIPWorker08]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker8.${HostedZoneName}'
+      Name: !Sub 'worker08.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker8
+        - !Ref EIPWorker08
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
 
-  RecordSetWorker9:
-    DependsOn: [EIPWorker9]
+  RecordSetWorker09:
+    DependsOn: [EIPWorker09]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
-      Name: !Sub 'worker9.${HostedZoneName}'
+      Name: !Sub 'worker09.${HostedZoneName}'
       ResourceRecords:
-        - !Ref EIPWorker9
+        - !Ref EIPWorker09
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
