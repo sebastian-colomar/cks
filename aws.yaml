@@ -862,6 +862,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster01
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -881,6 +882,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster02
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -900,6 +902,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster03
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -919,6 +922,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster04
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -938,6 +942,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster05
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -957,6 +962,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster06
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -976,6 +982,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster07
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -995,6 +1002,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster08
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1014,6 +1022,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster09
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1033,6 +1042,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster10
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1052,6 +1062,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster11
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1071,6 +1082,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster12
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1090,6 +1102,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster13
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1109,6 +1122,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster14
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1128,6 +1142,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster15
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1147,6 +1162,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster16
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1166,6 +1182,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster17
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1185,6 +1202,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster18
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1204,6 +1222,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster19
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1223,6 +1242,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster20
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1242,6 +1262,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster21
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1261,6 +1282,7 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster22
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1285,7 +1307,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker00
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1305,7 +1328,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker01
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1325,7 +1349,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker02
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1345,7 +1370,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker03
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1365,7 +1391,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker04
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1385,7 +1412,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker05
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1405,7 +1433,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker06
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1425,7 +1454,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker07
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1445,7 +1475,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker08
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1465,7 +1496,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker09
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1485,7 +1517,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker10
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1505,7 +1538,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker11
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1525,7 +1559,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker12
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1545,7 +1580,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker13
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1565,7 +1601,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker14
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1585,7 +1622,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker15
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1605,7 +1643,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker16
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1625,7 +1664,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker17
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1645,7 +1685,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker18
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1665,7 +1706,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker19
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1685,7 +1727,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker20
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1705,7 +1748,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker21
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
@@ -1725,7 +1769,8 @@ Resources:
             VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceWorkerImageId
-      InstanceType: !Ref InstanceWorkerInstanceType
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair
       PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker22
       SecurityGroupIds:
         - !GetAtt VPC.DefaultSecurityGroup
