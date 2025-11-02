@@ -289,12 +289,6 @@ Resources:
       PublicKeyMaterial: !Ref KeyPairPublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
-  KeyPairSecondary:
-    Properties:
-      KeyName: !Sub "KeyPairSecondary-${AWS::StackName}"
-      PublicKeyMaterial: !Ref KeyPairSecondaryPublicKeyMaterial
-    Type: AWS::EC2::KeyPair
-
   Role:
     Properties:
       AssumeRolePolicyDocument:
