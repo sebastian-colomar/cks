@@ -178,7 +178,7 @@ Parameters:
 #============================================================
 Resources:
 
-  Fn::ForEach:
+  Fn::ForEach::EIPMaster:
     - Index
     - !Ref Indices
     - 
@@ -188,12 +188,20 @@ Resources:
           InstanceId: !Ref InstanceMaster${Index}
         Type: AWS::EC2::EIP
 
+  Fn::ForEach::EIPWorker:
+    - Index
+    - !Ref Indices
+    - 
       EIPWorker${Index}:
         Properties:
           Domain: vpc
           InstanceId: !Ref InstanceWorker${Index}
         Type: AWS::EC2::EIP
 
+  Fn::ForEach::InstanceMaster:
+    - Index
+    - !Ref Indices
+    - 
       InstanceMaster${Index}:
         Properties:
           BlockDeviceMappings:
@@ -223,6 +231,10 @@ Resources:
               Value: !Sub "master${Index}.${HostedZoneName}"
         Type: AWS::EC2::Instance
 
+  Fn::ForEach::InstanceWorker:
+    - Index
+    - !Ref Indices
+    - 
       InstanceWorker${Index}:
         DependsOn: [VPCGatewayAttachment]  
         Properties:
@@ -253,6 +265,10 @@ Resources:
               Value: !Sub "worker${Index}.${HostedZoneName}"
         Type: AWS::EC2::Instance
 
+  Fn::ForEach::RecordSetMaster:
+    - Index
+    - !Ref Indices
+    - 
       RecordSetMaster${Index}:
         DependsOn: ['EIPMaster${Index}']
         Properties: 
@@ -264,6 +280,10 @@ Resources:
           Type: A
         Type: AWS::Route53::RecordSet
 
+  Fn::ForEach::RecordSetWorker:
+    - Index
+    - !Ref Indices
+    - 
       RecordSetWorker${Index}:
         DependsOn: ['EIPWorker${Index}']
         Properties: 
