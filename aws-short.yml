@@ -79,13 +79,14 @@ Metadata:
 Parameters:
 
   HostedZoneName:
-    Default: 'sebastian-colomar.es'
+    Default: 'sebastian-colomar.eu'
     Description: >
       The name of the hosted zone that you want to create records in.
     Type: String
 
   Indices:
-    Default: '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'
+    Default: '00,01'
+    #Default: '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'
     Type: CommaDelimitedList
 
   InstanceMasterImageId:
@@ -134,12 +135,6 @@ Parameters:
       Public SSH key used to access the instances (main key).
     Type: String
 
-  KeyPairSecondaryPublicKeyMaterial:
-    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
-    Description: >
-      Public SSH key used to access the instances (secondary key).
-    Type: String
-
   PrivateIpPrefixInstanceMaster:
     Default: 10.168.2.1
     Description: >
@@ -182,20 +177,22 @@ Resources:
     - Index
     - !Ref Indices
     - 
-      'EIPMaster${Index}':
+      EIPMaster${Index}:
         Properties:
           Domain: vpc
-          InstanceId: !Ref InstanceMaster${Index}
+          InstanceId: !Ref
+            !Sub InstanceMaster${Index}
         Type: AWS::EC2::EIP
 
   Fn::ForEach::EIPWorker:
     - Index
     - !Ref Indices
     - 
-      'EIPWorker${Index}':
+      EIPWorker${Index}:
         Properties:
           Domain: vpc
-          InstanceId: !Ref InstanceWorker${Index}
+          InstanceId: !Ref
+            !Sub InstanceWorker${Index}
         Type: AWS::EC2::EIP
 
   Fn::ForEach::InstanceMaster:
@@ -217,18 +214,9 @@ Resources:
             - !GetAtt VPC.DefaultSecurityGroup
             - !Ref SecurityGroup
           SubnetId: !Ref SubnetPublic
-          UserData:
-            'Fn::Base64': !Sub |
-              #cloud-config
-              users:
-                - default
-                - name: ubuntu
-                  ssh_authorized_keys:
-                    - ${KeyPairPublicKeyMaterial}
-                    - ${KeyPairSecondaryPublicKeyMaterial}
           Tags:
             - Key: Name
-              Value: !Sub "master${Index}.${HostedZoneName}"
+              Value: !Sub master${Index}.${HostedZoneName}
         Type: AWS::EC2::Instance
 
   Fn::ForEach::InstanceWorker:
@@ -251,18 +239,9 @@ Resources:
             - !GetAtt VPC.DefaultSecurityGroup
             - !Ref SecurityGroup
           SubnetId: !Ref SubnetPublic
-          UserData:
-            'Fn::Base64': !Sub |
-              #cloud-config
-              users:
-                - default
-                - name: ubuntu
-                  ssh_authorized_keys:
-                    - ${KeyPairPublicKeyMaterial}
-                    - ${KeyPairSecondaryPublicKeyMaterial}
           Tags:
             - Key: Name
-              Value: !Sub "worker${Index}.${HostedZoneName}"
+              Value: !Sub worker${Index}.${HostedZoneName}
         Type: AWS::EC2::Instance
 
   Fn::ForEach::RecordSetMaster:
@@ -271,12 +250,13 @@ Resources:
     - 
       RecordSetMaster${Index}:
         DependsOn:
-          - 'EIPMaster${Index}'
+          - !Sub EIPMaster${Index}
         Properties: 
-          HostedZoneName: !Sub '${HostedZoneName}.'
-          Name: !Sub 'master${Index}.${HostedZoneName}'
+          HostedZoneName: !Sub ${HostedZoneName}.
+          Name: !Sub master${Index}.${HostedZoneName}
           ResourceRecords:
-            - !Ref 'EIPMaster${Index}'
+            - !Ref
+                !Sub EIPMaster${Index}
           TTL: 300
           Type: A
         Type: AWS::Route53::RecordSet
@@ -287,12 +267,13 @@ Resources:
     - 
       RecordSetWorker${Index}:
         DependsOn:
-          - 'EIPWorker${Index}'
+          - !Sub EIPWorker${Index}
         Properties: 
-          HostedZoneName: !Sub '${HostedZoneName}.'
-          Name: !Sub 'worker${Index}.${HostedZoneName}'
+          HostedZoneName: !Sub ${HostedZoneName}.
+          Name: !Sub worker${Index}.${HostedZoneName}
           ResourceRecords:
-            - !Ref 'EIPWorker${Index}'
+            - !Ref 
+                !Sub EIPWorker${Index}
           TTL: 300
           Type: A
         Type: AWS::Route53::RecordSet
@@ -307,7 +288,7 @@ Resources:
 
   KeyPair:
     Properties:
-      KeyName: !Sub "KeyPair-${AWS::StackName}"
+      KeyName: !Sub KeyPair-${AWS::StackName}
       PublicKeyMaterial: !Ref KeyPairPublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
@@ -357,7 +338,7 @@ Resources:
       AvailabilityZone:
         Fn::Select:
           - 0
-          - Fn::GetAZs: !Ref 'AWS::Region'
+          - Fn::GetAZs: !Ref AWS::Region
       CidrBlock: !Ref SubnetCidrBlockPublic
       VpcId: !Ref VPC
     Type: AWS::EC2::Subnet
@@ -371,7 +352,7 @@ Resources:
   VPC:
     Properties:
       CidrBlock: !Ref VPCCidrBlock
-    Type: "AWS::EC2::VPC"
+    Type: AWS::EC2::VPC
 
   VPCGatewayAttachment:
     Properties:
