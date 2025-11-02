@@ -89,7 +89,7 @@ Parameters:
     Type: CommaDelimitedList
 
   InstanceMasterImageId:
-    Default: ami-02d26659fd82cf299 #MUMBAI #UBUNTU24
+    Default: ami-02b8269d5e85954ef #MUMBAI #UBUNTU24
     Description: >
       Select AMI to use for the Cluster Master instances. 
       When it's left blank, the default AMI for your AWS region will be used. 
@@ -109,7 +109,7 @@ Parameters:
     Type: Number
 
   InstanceWorkerImageId:
-    Default: ami-02d26659fd82cf299 #MUMBAI #UBUNTU24
+    Default: ami-02b8269d5e85954ef #MUMBAI #UBUNTU24
     Description: >
       Select AMI to use for the Cluster Worker instances. 
       When it's left blank, the default AMI for your AWS region will be used. 
