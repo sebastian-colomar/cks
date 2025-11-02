@@ -1746,7 +1746,7 @@ Resources:
     Type: AWS::EC2::KeyPair
 
   RecordSetMaster00:
-    DependsOn: [EIPMaster0]
+    DependsOn: [EIPMaster00]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master00.${HostedZoneName}'
@@ -1757,7 +1757,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetMaster01:
-    DependsOn: [EIPMaster1]
+    DependsOn: [EIPMaster01]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master01.${HostedZoneName}'
@@ -1768,7 +1768,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetMaster02:
-    DependsOn: [EIPMaster2]
+    DependsOn: [EIPMaster02]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master02.${HostedZoneName}'
@@ -1779,7 +1779,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetMaster03:
-    DependsOn: [EIPMaster3]
+    DependsOn: [EIPMaster03]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master03.${HostedZoneName}'
@@ -1790,7 +1790,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetMaster04:
-    DependsOn: [EIPMaster4]
+    DependsOn: [EIPMaster04]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master04.${HostedZoneName}'
@@ -1801,7 +1801,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetMaster05:
-    DependsOn: [EIPMaster5]
+    DependsOn: [EIPMaster05]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master05.${HostedZoneName}'
@@ -1812,7 +1812,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetMaster06:
-    DependsOn: [EIPMaster6]
+    DependsOn: [EIPMaster06]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master06.${HostedZoneName}'
@@ -1823,7 +1823,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetMaster07:
-    DependsOn: [EIPMaster7]
+    DependsOn: [EIPMaster07]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master07.${HostedZoneName}'
@@ -1834,7 +1834,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetMaster08:
-    DependsOn: [EIPMaster8]
+    DependsOn: [EIPMaster08]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master08.${HostedZoneName}'
@@ -1845,7 +1845,7 @@ Resources:
     Type: AWS::Route53::RecordSet
 
   RecordSetMaster09:
-    DependsOn: [EIPMaster9]
+    DependsOn: [EIPMaster09]
     Properties:
       HostedZoneName: !Sub '${HostedZoneName}.'
       Name: !Sub 'master09.${HostedZoneName}'
