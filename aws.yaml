@@ -839,6 +839,10 @@ Resources:
 
   InstanceMaster00:
     Properties:
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: !Ref InstanceMasterVolumeSize
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref InstanceMasterImageId
       InstanceType: !Ref InstanceMasterInstanceType
