@@ -49,6 +49,12 @@ Metadata:
           - PrivateIpAddressInstanceMaster14
           - PrivateIpAddressInstanceMaster15
           - PrivateIpAddressInstanceMaster16
+          - PrivateIpAddressInstanceMaster17
+          - PrivateIpAddressInstanceMaster18
+          - PrivateIpAddressInstanceMaster19
+          - PrivateIpAddressInstanceMaster20
+          - PrivateIpAddressInstanceMaster21
+          - PrivateIpAddressInstanceMaster22
           - PrivateIpAddressInstanceWorker0
           - PrivateIpAddressInstanceWorker1
           - PrivateIpAddressInstanceWorker2
@@ -66,6 +72,12 @@ Metadata:
           - PrivateIpAddressInstanceWorker14
           - PrivateIpAddressInstanceWorker15
           - PrivateIpAddressInstanceWorker16
+          - PrivateIpAddressInstanceWorker17
+          - PrivateIpAddressInstanceWorker18
+          - PrivateIpAddressInstanceWorker19
+          - PrivateIpAddressInstanceWorker20
+          - PrivateIpAddressInstanceWorker21
+          - PrivateIpAddressInstanceWorker22
           - SecurityGroupCidrIp
           - SubnetCidrBlockPublic
           - VPCCidrBlock
@@ -90,6 +102,12 @@ Metadata:
           - KeyPair14PublicKeyMaterial         
           - KeyPair15PublicKeyMaterial         
           - KeyPair16PublicKeyMaterial         
+          - KeyPair17PublicKeyMaterial         
+          - KeyPair18PublicKeyMaterial         
+          - KeyPair19PublicKeyMaterial         
+          - KeyPair20PublicKeyMaterial         
+          - KeyPair21PublicKeyMaterial         
+          - KeyPair22PublicKeyMaterial         
           
     ParameterLabels:
       HostedZoneName:
@@ -138,6 +156,18 @@ Metadata:
         default: The private IP address for Master 15
       PrivateIpAddressInstanceMaster16:
         default: The private IP address for Master 16
+      PrivateIpAddressInstanceMaster17:
+        default: The private IP address for Master 17
+      PrivateIpAddressInstanceMaster18:
+        default: The private IP address for Master 18
+      PrivateIpAddressInstanceMaster19:
+        default: The private IP address for Master 19
+      PrivateIpAddressInstanceMaster20:
+        default: The private IP address for Master 20
+      PrivateIpAddressInstanceMaster21:
+        default: The private IP address for Master 21
+      PrivateIpAddressInstanceMaster22:
+        default: The private IP address for Master 22
       PrivateIpAddressInstanceWorker0:
         default: The private IP address for Worker 0
       PrivateIpAddressInstanceWorker1:
@@ -172,6 +202,18 @@ Metadata:
         default: The private IP address for Worker 15
       PrivateIpAddressInstanceWorker16:
         default: The private IP address for Worker 16
+      PrivateIpAddressInstanceWorker17:
+        default: The private IP address for Worker 17
+      PrivateIpAddressInstanceWorker18:
+        default: The private IP address for Worker 18
+      PrivateIpAddressInstanceWorker19:
+        default: The private IP address for Worker 19
+      PrivateIpAddressInstanceWorker20:
+        default: The private IP address for Worker 20
+      PrivateIpAddressInstanceWorker21:
+        default: The private IP address for Worker 21
+      PrivateIpAddressInstanceWorker22:
+        default: The private IP address for Worker 22
       SecurityGroupCidrIp:
         default: Allowed CIDR for SSH EC2 instance Access
       SubnetCidrBlockPublic:
@@ -317,6 +359,42 @@ Parameters:
       Public SSH key used to access the group 16 instances.
     Type: String
 
+  KeyPair17PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 17 instances.
+    Type: String
+
+  KeyPair18PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 18 instances.
+    Type: String
+
+  KeyPair19PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 19 instances.
+    Type: String
+
+  KeyPair20PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 20 instances.
+    Type: String
+
+  KeyPair21PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 21 instances.
+    Type: String
+
+  KeyPair22PublicKeyMaterial:
+    Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
+    Description: >
+      Public SSH key used to access the group 22 instances.
+    Type: String
+
   PrivateIpAddressInstanceMaster0:
     Default: 10.168.2.100
     Description: >
@@ -419,6 +497,42 @@ Parameters:
       The private IP address for Master 16.
     Type: String
 
+  PrivateIpAddressInstanceMaster17:
+    Default: 10.168.2.117
+    Description: >
+      The private IP address for Master 17.
+    Type: String
+
+  PrivateIpAddressInstanceMaster18:
+    Default: 10.168.2.118
+    Description: >
+      The private IP address for Master 18.
+    Type: String
+
+  PrivateIpAddressInstanceMaster19:
+    Default: 10.168.2.119
+    Description: >
+      The private IP address for Master 19.
+    Type: String
+
+  PrivateIpAddressInstanceMaster20:
+    Default: 10.168.2.120
+    Description: >
+      The private IP address for Master 20.
+    Type: String
+
+  PrivateIpAddressInstanceMaster21:
+    Default: 10.168.2.121
+    Description: >
+      The private IP address for Master 21.
+    Type: String
+
+  PrivateIpAddressInstanceMaster22:
+    Default: 10.168.2.122
+    Description: >
+      The private IP address for Master 22.
+    Type: String
+
   PrivateIpAddressInstanceWorker0:
     Default: 10.168.2.200
     Description: >
@@ -519,6 +633,42 @@ Parameters:
     Default: 10.168.2.216
     Description: >
       The private IP address for Worker 16.
+    Type: String
+
+  PrivateIpAddressInstanceWorker17:
+    Default: 10.168.2.217
+    Description: >
+      The private IP address for Worker 17.
+    Type: String
+
+  PrivateIpAddressInstanceWorker18:
+    Default: 10.168.2.218
+    Description: >
+      The private IP address for Worker 18.
+    Type: String
+
+  PrivateIpAddressInstanceWorker19:
+    Default: 10.168.2.219
+    Description: >
+      The private IP address for Worker 19.
+    Type: String
+
+  PrivateIpAddressInstanceWorker20:
+    Default: 10.168.2.220
+    Description: >
+      The private IP address for Worker 20.
+    Type: String
+
+  PrivateIpAddressInstanceWorker21:
+    Default: 10.168.2.221
+    Description: >
+      The private IP address for Worker 21.
+    Type: String
+
+  PrivateIpAddressInstanceWorker22:
+    Default: 10.168.2.222
+    Description: >
+      The private IP address for Worker 22.
     Type: String
 
   SecurityGroupCidrIp:
@@ -649,6 +799,42 @@ Resources:
       InstanceId: !Ref InstanceMaster16
     Type: AWS::EC2::EIP
 
+  EIPMaster17:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster17
+    Type: AWS::EC2::EIP
+
+  EIPMaster18:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster18
+    Type: AWS::EC2::EIP
+
+  EIPMaster19:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster19
+    Type: AWS::EC2::EIP
+
+  EIPMaster20:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster20
+    Type: AWS::EC2::EIP
+
+  EIPMaster21:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster21
+    Type: AWS::EC2::EIP
+
+  EIPMaster22:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceMaster22
+    Type: AWS::EC2::EIP
+
   EIPWorker0:
     Properties:
       Domain: vpc
@@ -749,6 +935,42 @@ Resources:
     Properties:
       Domain: vpc
       InstanceId: !Ref InstanceWorker16
+    Type: AWS::EC2::EIP
+
+  EIPWorker17:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker17
+    Type: AWS::EC2::EIP
+
+  EIPWorker18:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker18
+    Type: AWS::EC2::EIP
+
+  EIPWorker19:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker19
+    Type: AWS::EC2::EIP
+
+  EIPWorker20:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker20
+    Type: AWS::EC2::EIP
+
+  EIPWorker21:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker21
+    Type: AWS::EC2::EIP
+
+  EIPWorker22:
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref InstanceWorker22
     Type: AWS::EC2::EIP
 
   InstanceMaster0:
@@ -1021,6 +1243,102 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "master16.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster17:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair17
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster17
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master17.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster18:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair18
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster18
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master18.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster19:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair19
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster19
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master19.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster20:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair20
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster20
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master20.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster21:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair21
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster21
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master21.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceMaster22:
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceMasterImageId
+      InstanceType: !Ref InstanceMasterInstanceType
+      KeyName: !Ref KeyPair22
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceMaster22
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "master22.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
   InstanceProfile:
@@ -1317,6 +1635,108 @@ Resources:
           Value: !Sub "worker16.${HostedZoneName}"
     Type: AWS::EC2::Instance
 
+  InstanceWorker17:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: !Ref KeyPair17
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker17
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker17.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker18:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: !Ref KeyPair18
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker18
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker18.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker19:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: !Ref KeyPair19
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker19
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker19.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker20:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: !Ref KeyPair20
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker20
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker20.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker21:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: !Ref KeyPair21
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker21
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker21.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
+  InstanceWorker22:
+    DependsOn: [VPCGatewayAttachment]  
+    Properties:
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref InstanceWorkerImageId
+      InstanceType: !Ref InstanceWorkerInstanceType
+      KeyName: !Ref KeyPair22
+      PrivateIpAddress: !Ref PrivateIpAddressInstanceWorker22
+      SecurityGroupIds:
+        - !GetAtt VPC.DefaultSecurityGroup
+        - !Ref SecurityGroup
+      SubnetId: !Ref SubnetPublic
+      Tags:
+        - Key: Name
+          Value: !Sub "worker22.${HostedZoneName}"
+    Type: AWS::EC2::Instance
+
   InternetGateway:
     Type: AWS::EC2::InternetGateway
 
@@ -1420,6 +1840,42 @@ Resources:
     Properties:
       KeyName: !Sub "KeyPair16-${AWS::StackName}"
       PublicKeyMaterial: !Ref KeyPair16PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair17:
+    Properties:
+      KeyName: !Sub "KeyPair17-${AWS::StackName}"
+      PublicKeyMaterial: !Ref KeyPair17PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair18:
+    Properties:
+      KeyName: !Sub "KeyPair18-${AWS::StackName}"
+      PublicKeyMaterial: !Ref KeyPair18PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair19:
+    Properties:
+      KeyName: !Sub "KeyPair19-${AWS::StackName}"
+      PublicKeyMaterial: !Ref KeyPair19PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair20:
+    Properties:
+      KeyName: !Sub "KeyPair20-${AWS::StackName}"
+      PublicKeyMaterial: !Ref KeyPair20PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair21:
+    Properties:
+      KeyName: !Sub "KeyPair21-${AWS::StackName}"
+      PublicKeyMaterial: !Ref KeyPair21PublicKeyMaterial
+    Type: AWS::EC2::KeyPair
+
+  KeyPair22:
+    Properties:
+      KeyName: !Sub "KeyPair22-${AWS::StackName}"
+      PublicKeyMaterial: !Ref KeyPair22PublicKeyMaterial
     Type: AWS::EC2::KeyPair
 
   RecordSetMaster0:
@@ -1609,6 +2065,72 @@ Resources:
       Type: A
     Type: AWS::Route53::RecordSet
 
+  RecordSetMaster17:
+    DependsOn: [EIPMaster17]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master17.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster17
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster18:
+    DependsOn: [EIPMaster18]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master18.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster18
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster19:
+    DependsOn: [EIPMaster19]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master19.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster19
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster20:
+    DependsOn: [EIPMaster20]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master20.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster20
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster21:
+    DependsOn: [EIPMaster21]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master21.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster21
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetMaster22:
+    DependsOn: [EIPMaster22]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'master22.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPMaster22
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
   RecordSetWorker0:
     DependsOn: [EIPWorker0]
     Properties: 
@@ -1792,6 +2314,72 @@ Resources:
       Name: !Sub 'worker16.${HostedZoneName}'
       ResourceRecords:
         - !Ref EIPWorker16
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker17:
+    DependsOn: [EIPWorker17]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker17.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker17
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker18:
+    DependsOn: [EIPWorker18]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker18.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker18
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker19:
+    DependsOn: [EIPWorker19]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker19.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker19
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker20:
+    DependsOn: [EIPWorker20]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker20.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker20
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker21:
+    DependsOn: [EIPWorker21]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker21.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker21
+      TTL: 300
+      Type: A
+    Type: AWS::Route53::RecordSet
+
+  RecordSetWorker22:
+    DependsOn: [EIPWorker22]
+    Properties: 
+      HostedZoneName: !Sub '${HostedZoneName}.'
+      Name: !Sub 'worker22.${HostedZoneName}'
+      ResourceRecords:
+        - !Ref EIPWorker22
       TTL: 300
       Type: A
     Type: AWS::Route53::RecordSet
