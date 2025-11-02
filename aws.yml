@@ -172,7 +172,7 @@ Parameters:
 #============================================================
 Resources:
 
-  Fn::ForEach::Indices:
+  Fn::ForEach::Block:
     - Index
     - !Ref Indices
     - 
