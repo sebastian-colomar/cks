@@ -106,7 +106,7 @@ Parameters:
     Default: 20
     Description: >
       Select Amazon EC2 volume size for the Cluster Master instances.
-    Type: Integer
+    Type: Number
 
   InstanceWorkerImageId:
     Default: ami-02d26659fd82cf299 #MUMBAI #UBUNTU24
@@ -126,7 +126,7 @@ Parameters:
     Default: 20
     Description: >
       Select Amazon EC2 volume size for the Cluster Worker instances.
-    Type: Integer
+    Type: Number
 
   KeyPairPublicKeyMaterial:
     Default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD+jz+hUdltY1wBrLs5D0Or6xaLBvTbfa/933B8IxKueX+Vh6GiBbF7xqag7UkBjgCCkG07dIzWRgodtR8worBxz81FL3r+ye60arOVMp3PIQo6LNIJrc4xrFghhzIQKLDDWgQZb3kiHkIBwBL74ez+q7UUSn3Bcyl8UWT3RxsSY968AD284Vld2Dz2i6tyR46CchuQASsswrPCE4y6t/5nJYOJniPGATICVenPAg6SPqXqFNkbDdsVGe0U3deTZvtBubB/tsoKzddZgqC8RkYcOTo07paqUq0Dui0AJDp6V90ziyaVdvG/WWUGjEL9fxJ5HNq5lXObU2fbegcNqhThn+U1r857AlmjyGcowTNZYfSN7Woh4mGHpPfmetfBnj/KWodiomTH1zzrS5lrFxlWPwzJYtcXyU5WOUYiIkRKzC0EgF3H8m2vvvCpaZItww0C7X7DTKnrOBYry67nvi8UgSSE2kHI8BzaqKX78BufAOGjeVhyqLMRammFNP8ILCE=
@@ -254,7 +254,7 @@ Resources:
         Type: AWS::EC2::Instance
 
       RecordSetMaster${Index}:
-        DependsOn: [EIPMaster${Index}]
+        DependsOn: ['EIPMaster${Index}']
         Properties: 
           HostedZoneName: !Sub '${HostedZoneName}.'
           Name: !Sub 'master${Index}.${HostedZoneName}'
@@ -265,7 +265,7 @@ Resources:
         Type: AWS::Route53::RecordSet
 
       RecordSetWorker${Index}:
-        DependsOn: [EIPWorker${Index}]
+        DependsOn: ['EIPWorker${Index}']
         Properties: 
           HostedZoneName: !Sub '${HostedZoneName}.'
           Name: !Sub 'worker${Index}.${HostedZoneName}'
