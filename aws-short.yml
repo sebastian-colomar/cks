@@ -197,7 +197,7 @@ Resources:
       InstanceMaster${Index}:
         Properties:
           BlockDeviceMappings:
-            - DeviceName: /dev/xvda
+            - DeviceName: /dev/sda1
               Ebs:
                 VolumeSize: !Ref InstanceMasterVolumeSize        
           IamInstanceProfile: !Ref InstanceProfile
@@ -227,7 +227,7 @@ Resources:
         DependsOn: [VPCGatewayAttachment]  
         Properties:
           BlockDeviceMappings:
-            - DeviceName: /dev/xvda
+            - DeviceName: /dev/sda1
               Ebs:
                 VolumeSize: !Ref InstanceWorkerVolumeSize        
           IamInstanceProfile: !Ref InstanceProfile
